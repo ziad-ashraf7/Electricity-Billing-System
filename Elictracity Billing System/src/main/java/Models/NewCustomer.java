@@ -7,22 +7,18 @@ public class NewCustomer implements Customer {
     private String phone;
     private String address;
     private String meterCode;
-    private boolean isNewCustomer = true;
+//    private boolean isNewCustomer = true;
     private String registrationDate; 
     private String contractFilePath; 
-    private boolean isMeterReady; 
+    private boolean isMeterReady;
+    private String password;
 
     
-    public NewCustomer(int customerId, String name, String email, String phone, String address, String meterCode, String registrationDate, String contractFilePath) {
-        this.customerId = customerId;
+    public NewCustomer(String name, String email, String password) {
+//        this.customerId = customerId;
         this.name = name;
         this.email = email;
-        this.phone = phone;
-        this.address = address;
-        this.meterCode = meterCode;
-        this.registrationDate = registrationDate;
-        this.contractFilePath = contractFilePath;
-        this.isMeterReady = false; 
+        this.password = password;
     }
 
     
@@ -56,7 +52,7 @@ public class NewCustomer implements Customer {
 
     @Override
     public boolean isNewCustomer(){
-        return isNewCustomer; 
+        return true;
     }
 
     public String getRegistrationDate(){
