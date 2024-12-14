@@ -1,4 +1,4 @@
-package models;
+package Models;
 
 public class ResidentialContract extends Contract {
     private String apartmentDetails; 

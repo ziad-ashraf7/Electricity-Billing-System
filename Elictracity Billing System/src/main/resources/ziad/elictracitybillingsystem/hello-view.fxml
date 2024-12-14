@@ -1,16 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
+<?import java.lang.String?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="ziad.elictracitybillingsystem.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello Anas" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="754.0" stylesheets="@../../Styles/Admin-view.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <BorderPane prefHeight="561.0" prefWidth="754.0">
+      <left>
+          <VBox prefHeight="561.0" prefWidth="91.0" styleClass="bar" stylesheets="@../../Styles/Admin-view.css" BorderPane.alignment="CENTER">
+              <VBox prefHeight="76.0" prefWidth="104.0" styleClass="login-btn" translateY="10.0">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Log out" translateX="5.0" wrappingWidth="79.421875" />
+              </VBox>
+              <VBox onMouseClicked="#showDetails" prefHeight="87.0" prefWidth="98.0">
+                  <ImageView fx:id="img" fitHeight="61.0" fitWidth="85.0" onMouseClicked="#showDetails" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../Icons/user.png" />
+                  </image>
+               </ImageView>
+                  <Text onMouseClicked="#showDetails" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="font" text="User Coontrolls" wrappingWidth="94.421875" />
+               <styleClass>
+                  <String fx:value="text-field" />
+                  <String fx:value="btn" />
+               </styleClass>
+              </VBox>
+            <VBox prefHeight="87.0" prefWidth="98.0">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Icons/user.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="font" text="    Statitstics" wrappingWidth="79.421875" />
+               </children>
+               <styleClass>
+                  <String fx:value="text-field" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </VBox>
+          </VBox>
+      </left>
+      <center>
+         <Text fx:id="Admin" strokeType="OUTSIDE" strokeWidth="0.0" text="User Controlls" wrappingWidth="237.13671875" BorderPane.alignment="CENTER" />
+      </center>
+   </BorderPane>
+</AnchorPane>

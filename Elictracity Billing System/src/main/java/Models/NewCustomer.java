@@ -1,4 +1,4 @@
-package models;
+package Models;
 
 public class NewCustomer implements Customer {
     private int customerId;

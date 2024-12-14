@@ -1,0 +1,27 @@
+.bar{
+    -fx-background-color: #e8d5d5;
+    -fx-spacing: 30px;
+}
+
+.btn{
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-min-width: 10px;
+    -fx-cursor: hand;
+}
+
+.login-btn{
+    -fx-background-color: #344adb;
+    -fx-border-width: 2px;
+    -fx-alignment: center;
+    -fx-border-color: #344adb;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+.login-btn Text{
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: x-large;
+}
