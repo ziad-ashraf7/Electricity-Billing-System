@@ -1,13 +1,17 @@
 package Models;
 
 public class Operator {
-    private int operatorId;
+    private final int operatorId;
     private String name;
-    private String region; 
+    private String email;
+    private String password;
+    private String region;
 
     
-    public Operator(int operatorId, String name, String region) {
+    public Operator(int operatorId, String email, String password, String name, String region) {
         this.operatorId = operatorId;
+        this.email = email;
+        this.password = password;
         this.name = name;
         this.region = region;
     }
@@ -15,9 +19,6 @@ public class Operator {
     
     public int getOperatorId(){
         return operatorId; 
-    }
-    public void setOperatorId(int operatorId){
-        this.operatorId = operatorId;
     }
 
     public String getName(){
