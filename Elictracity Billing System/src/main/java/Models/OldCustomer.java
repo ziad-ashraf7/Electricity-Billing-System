@@ -9,12 +9,12 @@ public class OldCustomer implements Customer {
     private String phone;
     private String address;
     private String meterCode;
-    private boolean isNewCustomer = false;
-    private List<String> complaints; 
-    private List<String> unpaidBills; 
+    //    private boolean isNewCustomer = false;
+    private List<Complaint> complaints;
+    private List<String> unpaidBills;
 
     // Constructor
-    public OldCustomer(int customerId, String name, String email, String phone, String address, String meterCode, List<String> complaints, List<String> unpaidBills) {
+    public OldCustomer(int customerId, String email, String name, String phone, String address, String meterCode, List<Complaint> complaints, List<String> unpaidBills) {
         this.customerId = customerId;
         this.name = name;
         this.email = email;
@@ -25,7 +25,7 @@ public class OldCustomer implements Customer {
         this.unpaidBills = unpaidBills;
     }
 
-    
+
     @Override
     public int getCustomerId(){
         return customerId;
@@ -33,46 +33,47 @@ public class OldCustomer implements Customer {
 
     @Override
     public String getName(){
-        return name; 
+        return name;
     }
 
     @Override
     public String getEmail(){
-        return email; 
+        return email;
     }
 
     @Override
     public String getPhone(){
-        return phone; 
+        return phone;
     }
 
     @Override
     public String getAddress(){
-        return address; 
+        return address;
     }
 
     @Override
     public String getMeterCode(){
-        return meterCode; 
+        return meterCode;
     }
 
     @Override
     public boolean isNewCustomer(){
-        return isNewCustomer; 
+//        return isNewCustomer;
+        return false;
     }
 
-    public List<String> getComplaints(){
-        return complaints; 
+    public List<Complaint> getComplaints(){
+        return complaints;
     }
-    public void setComplaints(List<String> complaints){
-        this.complaints = complaints; 
+    public void setComplaints(List<Complaint> complaints){
+        this.complaints = complaints;
     }
 
     public List<String> getUnpaidBills(){
-        return unpaidBills; 
+        return unpaidBills;
     }
     public void setUnpaidBills(List<String> unpaidBills){
-        this.unpaidBills = unpaidBills; 
+        this.unpaidBills = unpaidBills;
     }
 
     public void payBill(String billCode){
@@ -88,7 +89,7 @@ public class OldCustomer implements Customer {
         System.out.println("Monthly reading for meter " + meterCode + " has been submitted: " + reading);
     }
 
-    public void fileComplaint(String complaint){
+    public void fileComplaint(Complaint complaint){
         complaints.add(complaint);
         System.out.println("Complaint filed for meter " + meterCode + ": " + complaint);
     }
