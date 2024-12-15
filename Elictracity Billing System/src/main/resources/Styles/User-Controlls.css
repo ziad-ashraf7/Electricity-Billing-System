@@ -1,0 +1,76 @@
+.table-view {
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-border-color: #d3d3d3;
+    -fx-padding: 10;
+
+}
+
+.table-view .column-header {
+    -fx-background-color: #f4f4f4;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-text-fill: #333;
+    -fx-padding: 10;
+
+}
+
+.table-view .table-row-cell:filled {
+    -fx-background-color: #f9f5ff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+.table-view .table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, gray, 10, 0, 0, 2);
+
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.table-view .table-column {
+    -fx-alignment: center;
+    -fx-padding: 5 10;
+}
+
+.table-view .table-cell {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-padding: 5 10;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.add-btn{
+    -fx-background-color: #344adb;
+    -fx-border-width: 2px;
+    -fx-alignment: center;
+    -fx-border-color: #344adb;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-spacing: 10px;
+}
+.add-btn Text{
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: x-large;
+}

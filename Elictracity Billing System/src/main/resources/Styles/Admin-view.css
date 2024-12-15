@@ -1,5 +1,5 @@
 .bar{
-    -fx-background-color: #e8d5d5;
+    -fx-background-color: #ffffff;
     -fx-spacing: 30px;
 }
 
@@ -25,3 +25,8 @@
     -fx-font-weight: bold;
     -fx-font-size: x-large;
 }
+
+.header{
+    -fx-alignment:right;
+}
+

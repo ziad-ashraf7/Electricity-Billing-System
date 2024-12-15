@@ -58,7 +58,7 @@ public class AdminViewController implements Initializable {
 
         HandelClick(userControllsImg , userControllsTxt);
 
-        Pane pane =  FXMLLoader.load(getClass().getResource("User-Controlls.fxml"));
+        Pane pane =  FXMLLoader.load(HelloApplication.class.getResource("User-Controlls.fxml"));
 
         Board.setCenter(pane);
 

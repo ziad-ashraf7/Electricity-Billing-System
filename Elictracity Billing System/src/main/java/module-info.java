@@ -14,5 +14,7 @@ module ziad.elictracitybillingsystem {
     opens ziad.elictracitybillingsystem to javafx.fxml;
     exports ziad.elictracitybillingsystem;
     exports Controllers;
+    exports Models;
+    exports utils;
     opens Controllers to javafx.fxml;
 }
