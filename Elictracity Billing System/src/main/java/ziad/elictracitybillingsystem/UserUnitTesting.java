@@ -33,7 +33,8 @@ public class UserUnitTesting {
         return new OldCustomer(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[3], recordArr[4], recordArr[5], recordArr[6], complaintsTmp, unpaidBillsTmp);
     }
     static Admin parseAdminInfoObject(String[] recordArr) throws FileNotFoundException {
-        return new Admin(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[2], recordArr[3]);
+//        return new Admin(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[2], recordArr[3]);
+        return null;
     }
     static Operator parseOperatorInfoObject(String[] recordArr) throws FileNotFoundException {
         return new Operator(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[2], recordArr[3], recordArr[4]);

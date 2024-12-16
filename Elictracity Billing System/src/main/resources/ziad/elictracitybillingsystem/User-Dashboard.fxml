@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <VBox layoutX="181.0" layoutY="54.0" prefHeight="256.0" prefWidth="239.0" styleClass="vbox" stylesheets="@../../Styles/UserDashBoard.css">
+         <children>
+            <VBox prefHeight="35.0" prefWidth="248.0" styleClass="btn" stylesheets="@../../Styles/UserDashBoard.css">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add User" />
+               </children>
+            </VBox>
+            <VBox prefHeight="35.0" prefWidth="248.0" styleClass="btn" stylesheets="@../../Styles/UserDashBoard.css">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Delete User" />
+               </children>
+            </VBox>
+            <VBox prefHeight="35.0" prefWidth="248.0" styleClass="btn" stylesheets="@../../Styles/UserDashBoard.css">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Edite User" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

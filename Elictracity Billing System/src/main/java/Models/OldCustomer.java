@@ -2,8 +2,8 @@ package Models;
 
 import java.util.List;
 
-public class OldCustomer implements Customer {
-    private int customerId;
+public class OldCustomer extends User  {
+    private int userId;
     private String name;
     private String email;
     private String phone;
@@ -15,7 +15,7 @@ public class OldCustomer implements Customer {
 
     // Constructor
     public OldCustomer(int customerId, String email, String name, String phone, String address, String meterCode, List<Complaint> complaints, List<String> unpaidBills) {
-        this.customerId = customerId;
+        this.userId = customerId;
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -26,9 +26,11 @@ public class OldCustomer implements Customer {
     }
 
 
+
+
     @Override
-    public int getCustomerId(){
-        return customerId;
+    int getId() {
+        return userId;
     }
 
     @Override
@@ -57,10 +59,15 @@ public class OldCustomer implements Customer {
     }
 
     @Override
-    public boolean isNewCustomer(){
-//        return isNewCustomer;
-        return false;
+    String getRole() {
+        return "";
     }
+
+    @Override
+    String getAddingDate() {
+        return "";
+    }
+
 
     public List<Complaint> getComplaints(){
         return complaints;

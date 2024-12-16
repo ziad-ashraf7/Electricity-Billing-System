@@ -1,0 +1,71 @@
+.root-pane {
+    -fx-background-color: #F9F9F9;
+    -fx-border-color: #DADADA;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-spacing: 20px;
+}
+.con{
+    -fx-spacing: 50px;
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.input-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.input-field {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-color: #F1F1F1;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.action-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.add-button {
+    /*-fx-color: #673AB7;*/
+    -fx-text-fill: white;
+    -fx-background-color: #673AB7;
+    -fx-font-weight: bold   ;
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+
+}
+.add-button:hover {
+    -fx-effect: dropshadow(gaussian, black, 20, 0, 2, 2);
+}
+
+.cancel-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #673AB7;
+    -fx-border-color: #673AB7;
+}
+
+.err-msg{
+    -fx-text-fill: red;
+    /*-fx-background-color: #673AB7;*/
+    /*-fx-font-weight: bold   ;*/
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+

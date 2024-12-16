@@ -1,34 +1,36 @@
 package Models;
 
-public class NewCustomer implements Customer {
-    private int customerId;
+public class NewCustomer extends User   {
+    private int userId;
     private String name;
     private String email;
     private String phone;
     private String address;
     private String meterCode;
-    private boolean isNewCustomer = true;
-    private String registrationDate; 
+    private String Role = String.valueOf(ROLES.CUSTOMER);
+    private String registrationDate;
     private String contractFilePath; 
-    private boolean isMeterReady; 
+    private boolean isMeterReady;
+    private String addingDate;
 
-    
+
     public NewCustomer(int customerId, String name, String email, String phone, String address, String meterCode, String registrationDate, String contractFilePath) {
-        this.customerId = customerId;
+        this.userId = customerId;
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.address = address;
         this.meterCode = meterCode;
-        this.registrationDate = registrationDate;
+        this.addingDate = registrationDate;
         this.contractFilePath = contractFilePath;
         this.isMeterReady = false; 
     }
 
     
+
     @Override
-    public int getCustomerId(){
-        return customerId;
+    public int getId() {
+        return userId;
     }
 
     @Override
@@ -54,10 +56,7 @@ public class NewCustomer implements Customer {
         return meterCode; 
     }
 
-    @Override
-    public boolean isNewCustomer(){
-        return isNewCustomer; 
-    }
+
 
     public String getRegistrationDate(){
         return registrationDate; 
@@ -84,5 +83,18 @@ public class NewCustomer implements Customer {
         if (isMeterReady) {
             System.out.println("Email sent to " + email + ": Your meter is ready!");
         }
+    }
+
+    public String getRole() {
+        return Role;
+    }
+
+    @Override
+    public String getAddingDate() {
+        return addingDate;
+    }
+
+    public void setRole(String role) {
+        Role = role;
     }
 }

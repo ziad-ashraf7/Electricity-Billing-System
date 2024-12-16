@@ -1,0 +1,18 @@
+.btn{
+    -fx-background-color: #344adb;
+    -fx-border-width: 2px;
+    -fx-alignment: center;
+    -fx-border-color: #344adb;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+.btn Text{
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: x-large;
+}
+.vbox{
+    -fx-spacing: 70px;
+}

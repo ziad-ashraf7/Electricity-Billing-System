@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="587.0" prefWidth="738.0" stylesheets="@../../Styles/Admin-view.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserControllsController">
    <children>
-      <TableView fx:id="tble" layoutY="78.0" prefHeight="509.0" prefWidth="738.0" styleClass="tble" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="78.0">
+      <TableView fx:id="tble" prefHeight="587.0" prefWidth="738.0" styleClass="tble" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
           <TableColumn prefWidth="96.5" text="User id" />
           <TableColumn prefWidth="107.5" text="User Name" />
@@ -26,28 +21,5 @@
             <URL value="@../../Styles/User-Controlls.css" />
          </stylesheets>
       </TableView>
-      <HBox alignment="TOP_RIGHT" prefHeight="71.0" prefWidth="738.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <HBox prefHeight="50.0" prefWidth="98.0" styleClass="add-btn" stylesheets="@../../Styles/User-Controlls.css">
-               <children>
-                  <ImageView fitHeight="40.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../Icons/add.png" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add User" />
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <HBox.margin>
-                  <Insets bottom="10.0" top="-5.0" />
-               </HBox.margin>
-            </HBox>
-         </children>
-         <padding>
-            <Insets right="20.0" top="10.0" />
-         </padding>
-      </HBox>
    </children>
 </AnchorPane>

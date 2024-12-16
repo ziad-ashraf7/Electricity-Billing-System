@@ -1,5 +1,7 @@
 package Controllers;
+import Models.Admin;
 import Models.NewCustomer;
+import Models.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,52 +14,55 @@ import utils.FileManager;
 
 import java.io.File;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class UserControllsController implements Initializable {
 
     @FXML
-    private TableView<NewCustomer> tble;
+    private TableView<User> tble;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        NewCustomer costumer = new NewCustomer(1 ,
-                "ziad" ,
-                "ziad@gmail.com",
-                "0121254514" ,
-                "ay 7aga" ,
-                "1234" ,
-                "8/12/2004" ,
-                "A7a");
+//        NewCustomer costumer = new NewCustomer(1 ,
+//                "ziad" ,
+//                "ziad@gmail.com",
+//                "0121254514" ,
+//                "ay 7aga" ,
+//                "1234" ,
+//                "8/12/2004" ,
+//                "A7a");
 
-        tble.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("customerId"));
+        tble.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("id"));
         tble.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("name"));
         tble.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("email"));
-        tble.getColumns().get(3).setCellValueFactory(new PropertyValueFactory<>("registrationDate"));
+        tble.getColumns().get(3).setCellValueFactory(new PropertyValueFactory<>("addingDate"));
+        tble.getColumns().get(4).setCellValueFactory(new PropertyValueFactory<>("Role"));
         List<String> data = FileManager.readFromFile("D:\\Projects\\JavaFX\\Electricity-Billing-System\\Elictracity Billing System\\src\\main\\resources\\Database\\UsersInfo.csv");
-        tble.setRowFactory(tv -> {
-            TableRow<NewCustomer> row = new TableRow<>();
-            row.itemProperty().addListener((obs, oldItem, newItem) -> {
-                if(row.isEmpty()){
-                    row.setVisible(false);
-                }
-            });
-            return row;
-        });
+
         for (int i = 0; i < data.size(); i++) {
             String line = data.get(i);
             String [] records = line.split(",");
-            NewCustomer newCustomer = new NewCustomer( Integer.parseInt(records[0]) ,
-                    records[3] ,
-                    records[1] ,
-                    records[4] ,
-                    records[5],
-                    records[6],
-                    "hello",
-                    "hell");
+            if(records[6].equals("Admin")){
+                Admin admin = new Admin(Integer.parseInt(records[0]),
+                        records[1],
+                        records[2],
+                        records[3],
+                        records[8]);
+                tble.getItems().add(admin);
+            }else{
+                NewCustomer newCustomer = new NewCustomer( Integer.parseInt(records[0]) ,
+                        records[3] ,
+                        records[1] ,
+                        records[4] ,
+                        records[5],
+                        records[6],
+                        ""+LocalDate.now(),
+                        "hell");
+                tble.getItems().add(newCustomer);
+            }
 
-            tble.getItems().add(newCustomer);
 
         }
 

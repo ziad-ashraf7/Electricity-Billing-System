@@ -38,7 +38,7 @@
                </children>
             </VBox>
                 <VBox fx:id="userControllsCon" onMouseClicked="#showUserControlls" prefHeight="70.0" prefWidth="90.0">
-                    <ImageView fx:id="userControllsImg" fitHeight="53.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                    <ImageView fx:id="userControllsImg" fitHeight="51.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                         <image>
                             <Image url="@../../Icons/user.png" />
                         </image>
@@ -63,6 +63,24 @@
                         <String fx:value="btn" />
                     </styleClass>
                 </VBox>
+            <VBox fx:id="userDashCon" onMouseClicked="#showUserDash" prefHeight="66.0" prefWidth="92.0">
+               <styleClass>
+                  <String fx:value="text-field" />
+                  <String fx:value="btn" />
+               </styleClass>
+               <children>
+                  <ImageView fx:id="userDashImg" fitHeight="53.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Icons/user.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="userDashTxt" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="font" text="Users Dashboard" wrappingWidth="97.421875">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
             </VBox>
         </left>
     </BorderPane>

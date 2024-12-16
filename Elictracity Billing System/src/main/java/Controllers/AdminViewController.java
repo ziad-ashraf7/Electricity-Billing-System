@@ -33,6 +33,15 @@ public class AdminViewController implements Initializable {
     private Text userBillsTxt;
 
     @FXML
+    private VBox userDashCon;
+
+    @FXML
+    private ImageView userDashImg;
+
+    @FXML
+    private Text userDashTxt;
+
+    @FXML
     private VBox userStatCon;
 
     @FXML
@@ -81,12 +90,24 @@ public class AdminViewController implements Initializable {
 
         System.out.println("Showing User Stats");
     }
+    @FXML
+    void showUserDash(MouseEvent event) throws IOException {
+        HandelClick(userDashImg , userDashTxt);
+        Pane pane =  FXMLLoader.load(HelloApplication.class.getResource("UsersDahsboard.fxml"));
+        pane.setMinSize(500 , 500);
+
+        pane.prefWidthProperty().bind(Board.widthProperty());
+        pane.prefHeightProperty().bind(Board.heightProperty());
+        Board.setCenter(pane);
+
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         containers.add(userControllsCon);
         containers.add(userStatCon);
         containers.add(userBillsCont);
+        containers.add(userDashCon);
     }
 
     private void HandelClick(ImageView imageView , Text text){
