@@ -38,7 +38,6 @@
 }
 
 .add-button {
-    /*-fx-color: #673AB7;*/
     -fx-text-fill: white;
     -fx-background-color: #673AB7;
     -fx-font-weight: bold   ;
@@ -60,12 +59,41 @@
 
 .err-msg{
     -fx-text-fill: red;
-    /*-fx-background-color: #673AB7;*/
-    /*-fx-font-weight: bold   ;*/
     -fx-font-size: 20px;
     -fx-cursor: hand;
     -fx-border-radius: 30px;
     -fx-background-radius: 30px;
 }
 
+
+.check-box {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-padding: 5;
+}
+
+
+.check-box > .box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #888888;
+    -fx-border-radius: 3;
+    -fx-padding: 2;
+    -fx-border-width: 2;
+}
+
+.check-box > .box:hover {
+    -fx-border-color: #005cbf;
+}
+
+.check-box > .box:selected {
+    -fx-background-color: #005cbf;
+    -fx-border-color: #005cbf;
+}
+
+.check-box > .box > .mark:selected {
+    -fx-background-color: #211f83;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
 

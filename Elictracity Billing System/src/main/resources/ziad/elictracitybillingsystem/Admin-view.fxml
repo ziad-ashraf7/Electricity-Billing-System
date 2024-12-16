@@ -40,7 +40,7 @@
                 <VBox fx:id="userControllsCon" onMouseClicked="#showUserControlls" prefHeight="70.0" prefWidth="90.0">
                     <ImageView fx:id="userControllsImg" fitHeight="51.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-                            <Image url="@../../Icons/user.png" />
+                            <Image url="@../../Icons/settings.png" />
                         </image>
                     </ImageView>
                     <Text fx:id="userControllsTxt" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="font" text="User Coontrolls" wrappingWidth="87.421875" />
@@ -53,7 +53,7 @@
                     <children>
                         <ImageView fx:id="userStatImg" fitHeight="53.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../Icons/user.png" />
+                                <Image url="@../../Icons/trend.png" />
                             </image>
                         </ImageView>
                         <Text fx:id="userStatTxt" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="font" text="    Statitstics" wrappingWidth="79.421875" />
@@ -71,7 +71,7 @@
                <children>
                   <ImageView fx:id="userDashImg" fitHeight="53.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../Icons/user.png" />
+                        <Image url="@../../Icons/dashboard.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="userDashTxt" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="font" text="Users Dashboard" wrappingWidth="97.421875">

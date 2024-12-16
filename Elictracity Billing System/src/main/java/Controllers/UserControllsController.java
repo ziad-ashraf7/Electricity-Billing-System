@@ -1,4 +1,5 @@
 package Controllers;
+
 import Models.Admin;
 import Models.NewCustomer;
 import Models.User;
@@ -25,15 +26,6 @@ public class UserControllsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        NewCustomer costumer = new NewCustomer(1 ,
-//                "ziad" ,
-//                "ziad@gmail.com",
-//                "0121254514" ,
-//                "ay 7aga" ,
-//                "1234" ,
-//                "8/12/2004" ,
-//                "A7a");
-
         tble.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("id"));
         tble.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("name"));
         tble.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("email"));
@@ -43,22 +35,22 @@ public class UserControllsController implements Initializable {
 
         for (int i = 0; i < data.size(); i++) {
             String line = data.get(i);
-            String [] records = line.split(",");
-            if(records[6].equals("Admin")){
+            String[] records = line.split(",");
+            if (records[6].equals("Admin")) {
                 Admin admin = new Admin(Integer.parseInt(records[0]),
                         records[1],
                         records[2],
                         records[3],
                         records[8]);
                 tble.getItems().add(admin);
-            }else{
-                NewCustomer newCustomer = new NewCustomer( Integer.parseInt(records[0]) ,
-                        records[3] ,
-                        records[1] ,
-                        records[4] ,
+            } else {
+                NewCustomer newCustomer = new NewCustomer(Integer.parseInt(records[0]),
+                        records[3],
+                        records[1],
+                        records[4],
                         records[5],
                         records[6],
-                        ""+LocalDate.now(),
+                        "" + LocalDate.now(),
                         "hell");
                 tble.getItems().add(newCustomer);
             }

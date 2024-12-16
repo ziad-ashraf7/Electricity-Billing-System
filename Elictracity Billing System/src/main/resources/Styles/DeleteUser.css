@@ -1,0 +1,23 @@
+.add-button {
+    /*-fx-color: #673AB7;*/
+    -fx-text-fill: white;
+    -fx-background-color: #673AB7;
+    -fx-font-weight: bold   ;
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+
+}
+.add-button:hover {
+    -fx-effect: dropshadow(gaussian, black, 20, 0, 2, 2);
+}
+
+.input-field {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-color: #F1F1F1;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}

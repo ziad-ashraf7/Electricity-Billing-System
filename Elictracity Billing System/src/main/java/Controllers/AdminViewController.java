@@ -65,7 +65,7 @@ public class AdminViewController implements Initializable {
     @FXML
     void showUserControlls(MouseEvent event) throws IOException {
 
-        HandelClick(userControllsImg , userControllsTxt);
+        HandelClick(userControllsImg , userControllsTxt,"settings");
 
         Pane pane =  FXMLLoader.load(HelloApplication.class.getResource("User-Controlls.fxml"));
 
@@ -75,7 +75,7 @@ public class AdminViewController implements Initializable {
 
     @FXML
     void showStat(MouseEvent event) {
-        HandelClick(userStatImg , userStatTxt);
+        HandelClick(userStatImg , userStatTxt,"trend");
 
 
 
@@ -83,16 +83,20 @@ public class AdminViewController implements Initializable {
     }
 
     @FXML
-    void showUserBills(MouseEvent event) {
-        HandelClick(userBillsImg , userBillsTxt);
+    void showUserBills(MouseEvent event) throws IOException {
+        HandelClick(userBillsImg , userBillsTxt,"user");
 
+        Pane pane =  FXMLLoader.load(HelloApplication.class.getResource("Bills.fxml"));
+        pane.setMinSize(500 , 500);
 
-
+        pane.prefWidthProperty().bind(Board.widthProperty());
+        pane.prefHeightProperty().bind(Board.heightProperty());
+        Board.setCenter(pane);
         System.out.println("Showing User Stats");
     }
     @FXML
     void showUserDash(MouseEvent event) throws IOException {
-        HandelClick(userDashImg , userDashTxt);
+        HandelClick(userDashImg , userDashTxt, "dashboard");
         Pane pane =  FXMLLoader.load(HelloApplication.class.getResource("UsersDahsboard.fxml"));
         pane.setMinSize(500 , 500);
 
@@ -110,12 +114,12 @@ public class AdminViewController implements Initializable {
         containers.add(userDashCon);
     }
 
-    private void HandelClick(ImageView imageView , Text text){
+    private void HandelClick(ImageView imageView , Text text, String name){
         // Deselecting the button
         deSelect();
 
         // Selecting the button
-        imageView.setImage(new Image(HelloApplication.class.getResourceAsStream("/Icons/user-selected.png")));
+        imageView.setImage(new Image(HelloApplication.class.getResourceAsStream("/Icons/"+name+"-selected.png")));
         text.setFill(Color.rgb(52 ,74 ,219));
 
 
@@ -125,11 +129,13 @@ public class AdminViewController implements Initializable {
 
 
     private void deSelect(){
+        userStatImg.setImage(new Image(HelloApplication.class.getResourceAsStream("/Icons/trend.png")));
+        userDashImg.setImage(new Image(HelloApplication.class.getResourceAsStream("/Icons/dashboard.png")));
+        userControllsImg.setImage(new Image(HelloApplication.class.getResourceAsStream("/Icons/settings.png")));
+        userBillsImg.setImage(new Image(HelloApplication.class.getResourceAsStream("/Icons/user.png")));
         for (VBox imageView : containers){
             for(Node node : imageView.getChildren()){
-                if(node instanceof ImageView){
-                    ((ImageView) node).setImage(new Image(HelloApplication.class.getResourceAsStream("/Icons/user.png")));
-                }else if(node instanceof Text){
+                if(node instanceof Text){
                     ((Text) node).setFill(Color.BLACK);
 
                 }

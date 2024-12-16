@@ -1,10 +1,10 @@
 package Controllers;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import utils.FileManager;
@@ -38,9 +38,15 @@ public class AddUser implements Initializable {
         Stage stage = (Stage) emailTF.getScene().getWindow();
         stage.close();
     }
-    @FXML
-    private TextField pwTF;
 
+    @FXML
+    private PasswordField pwTF;
+
+    @FXML
+    private TextField showPwTF;
+
+    @FXML
+    private CheckBox showPwBtn;
     @FXML
     void addUser(MouseEvent event) {
         if(FNameTF.getText().isEmpty()){
@@ -88,5 +94,10 @@ public class AddUser implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         errMsg.setVisible(false);
         roleSelect.getItems().addAll("Admin", "Customer");
+        showPwTF.setVisible(false);
+        showPwTF.textProperty().bindBidirectional(pwTF.textProperty());
+        showPwTF.visibleProperty().bind(showPwBtn.selectedProperty());
+        pwTF.visibleProperty().bind(showPwTF.visibleProperty().not());
+
     }
 }

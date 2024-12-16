@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -27,7 +29,9 @@
             <Insets left="10.0" />
          </padding></Label>
       <Label fx:id="errMsg" layoutX="79.0" layoutY="567.0" prefHeight="30.0" prefWidth="576.0" styleClass="err-msg" stylesheets="@../../Styles/AddUser.css" text="Label" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="207.0" />
-      <TextField fx:id="pwTF" layoutX="77.0" layoutY="418.0" prefHeight="42.0" prefWidth="709.0" styleClass="input-field" stylesheets="@../../Styles/AddUser.css" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="76.0" />
       <Label layoutX="77.0" layoutY="392.0" styleClass="input-label" stylesheets="@../../Styles/AddUser.css" text="Password" />
+      <PasswordField fx:id="pwTF" layoutX="77.0" layoutY="412.0" prefHeight="42.0" prefWidth="709.0" styleClass="input-field" stylesheets="@../../Styles/AddUser.css" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="76.0" />
+      <TextField fx:id="showPwTF" layoutX="78.0" layoutY="412.0" prefHeight="42.0" prefWidth="709.0" styleClass="input-field" stylesheets="@../../Styles/AddUser.css" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="75.0" />
+      <CheckBox fx:id="showPwBtn" layoutX="655.0" layoutY="382.0" mnemonicParsing="false" stylesheets="@../../Styles/AddUser.css" text="show password" AnchorPane.leftAnchor="655.0" AnchorPane.rightAnchor="73.5" />
    </children>
 </AnchorPane>

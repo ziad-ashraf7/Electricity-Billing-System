@@ -5,18 +5,24 @@ public class Bill {
     private String meterCode; 
     private double amount; 
     private boolean isPaid;
-    private String dueDate; 
+    private String dueDate;
+    private String region;
 
-    
-    public Bill(int billId, String meterCode, double amount, boolean isPaid, String dueDate) {
+
+
+    public Bill(int billId, String meterCode, double amount, String dueDate , String region) {
         this.billId = billId;
         this.meterCode = meterCode;
         this.amount = amount;
-        this.isPaid = isPaid;
         this.dueDate = dueDate;
+        this.region = region;
     }
 
-    
+    public String getRegion() {return region;}
+
+    public void setRegion(String region) {this.region = region;}
+
+
     public int getBillId(){
         return billId; 
     }

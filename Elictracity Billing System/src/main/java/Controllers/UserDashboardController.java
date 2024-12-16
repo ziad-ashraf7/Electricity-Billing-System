@@ -10,7 +10,7 @@ import ziad.elictracitybillingsystem.HelloApplication;
 
 import java.io.IOException;
 
-public class UserDashboardController{
+public class UserDashboardController {
     @FXML
     private VBox addUsrCon;
 
@@ -34,8 +34,14 @@ public class UserDashboardController{
     }
 
     @FXML
-    void showDelUser(MouseEvent event) {
+    void showDelUser(MouseEvent event) throws IOException {
+        Stage stage = new Stage();
+        stage.setTitle("Add User");
 
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getClass().getResource("test.fxml"));
+        Scene scene = new Scene(FXMLLoader.load(HelloApplication.class.getResource("DeleteUser.fxml")));
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
