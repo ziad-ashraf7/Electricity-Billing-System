@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane prefWidth="800" prefHeight="500" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+
+    <!-- Sidebar -->
+    <VBox prefWidth="100" style="-fx-background-color: #F8F9FA;" spacing="20" alignment="TOP_CENTER">
+        <Button text="Log Out" style="-fx-background-color: purple; -fx-text-fill: white;"
+                prefWidth="60" prefHeight="40"/>
+
+        <VBox spacing="10" alignment="TOP_CENTER">
+            <Button text="Bills" style="-fx-background-color: transparent; -fx-text-fill: gray;" />
+            <Button text="Monthly Reading" style="-fx-background-color: transparent; -fx-text-fill: purple;" />
+        </VBox>
+    </VBox>
+
+    <!-- Main Content -->
+    <VBox spacing="10" padding="20">
+        <!-- Add New Monthly Reading Button -->
+        <HBox alignment="TOP_RIGHT">
+            <Button text="+ ADD NEW MONTHLY READING" style="-fx-background-color: purple; -fx-text-fill: white;" />
+        </HBox>
+
+        <!-- Table -->
+        <TableView fx:id="tableView" style="-fx-background-color: #FAFAFA;" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn text="Id" prefWidth="100"/>
+                <TableColumn text="Reading" prefWidth="150"/>
+                <TableColumn text="Meter Code" prefWidth="150"/>
+                <TableColumn text="Date" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+</BorderPane>

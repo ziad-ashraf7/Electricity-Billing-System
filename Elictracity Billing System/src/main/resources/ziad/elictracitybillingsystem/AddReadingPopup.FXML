@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+
+<AnchorPane prefWidth="400" prefHeight="300" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #E0E0E0; -fx-border-radius: 10;">
+
+    <!-- Title -->
+    <Label text="Add new Reading" layoutX="20" layoutY="20" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <!-- Form Fields -->
+    <VBox spacing="15" layoutX="20" layoutY="60" prefWidth="360">
+        <!-- Reading Input -->
+        <VBox spacing="5">
+            <TextField fx:id="readingInput" promptText="Reading" />
+            <Label text="Help text" style="-fx-font-size: 10px; -fx-text-fill: gray;" />
+        </VBox>
+
+        <!-- Meter Code Input -->
+        <VBox spacing="5">
+            <TextField fx:id="meterCodeInput" promptText="Meter Code" />
+            <Label text="Help text" style="-fx-font-size: 10px; -fx-text-fill: gray;" />
+        </VBox>
+
+        <!-- Date Input -->
+        <VBox spacing="5">
+            <DatePicker fx:id="dateInput" promptText="Date" />
+            <Label text="Help text" style="-fx-font-size: 10px; -fx-text-fill: gray;" />
+        </VBox>
+    </VBox>
+
+    <!-- Buttons -->
+    <HBox spacing="20" layoutX="250" layoutY="260" alignment="CENTER_RIGHT">
+        <Button text="SUBMIT COMPLAIN" style="-fx-text-fill: purple;" />
+        <Button text="CANCEL" style="-fx-text-fill: purple;" />
+    </HBox>
+
+</AnchorPane>

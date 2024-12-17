@@ -86,7 +86,7 @@ public class AdminViewController implements Initializable {
     void showUserBills(MouseEvent event) throws IOException {
         HandelClick(userBillsImg , userBillsTxt,"user");
 
-        Pane pane =  FXMLLoader.load(HelloApplication.class.getResource("Bills.fxml"));
+        Pane pane =  FXMLLoader.load(HelloApplication.class.getResource("Bills.csv.fxml"));
         pane.setMinSize(500 , 500);
 
         pane.prefWidthProperty().bind(Board.widthProperty());

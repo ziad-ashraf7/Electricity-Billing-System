@@ -2,8 +2,7 @@ package ziad.elictracitybillingsystem;
 
 import Models.*;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +27,7 @@ public class UserUnitTesting {
 
         List<String> unpaidBillsTmp = new ArrayList<String>();
 
-        // Create Function to collect UnPaid Bills
+        // Create Function to collect UnPaid Bills.csv
 
         return new OldCustomer(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[3], recordArr[4], recordArr[5], recordArr[6], complaintsTmp, unpaidBillsTmp);
     }
@@ -39,7 +38,6 @@ public class UserUnitTesting {
     static Operator parseOperatorInfoObject(String[] recordArr) throws FileNotFoundException {
         return new Operator(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[2], recordArr[3], recordArr[4]);
     }
-
 
     static private Login login() throws FileNotFoundException {
         System.out.println("Welcome to Electricity Billing System, Please Login");
@@ -98,6 +96,6 @@ public class UserUnitTesting {
 
 
     public static void main(String[] args) throws FileNotFoundException {
-        Login x = login();
+//        Login x = login();
     }
 }

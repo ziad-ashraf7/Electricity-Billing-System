@@ -20,3 +20,8 @@
 
 | CustomerId | Path |
 | ---------- | ---- |
+
+### Bills.csv
+| billId | CustomerID | meterCode | amount | dueDate | region | status |
+|---------|-----------|-----------|--------|---------|--------|--------|
+Status: true for paid, false for unpaid
