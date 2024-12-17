@@ -2,16 +2,18 @@ package Models;
 
 public class Bill {
     private int billId;
-    private String meterCode; 
-    private double amount; 
-    private boolean isPaid;
+    private int CustomerID;
+    private String meterCode;
+    private double amount;
+    private boolean status = false; // true for paid, false for unpaid
     private String dueDate;
     private String region;
 
 
 
-    public Bill(int billId, String meterCode, double amount, String dueDate , String region) {
+    public Bill(int billId, int CustomerID, String meterCode, double amount, String dueDate , String region) {
         this.billId = billId;
+        this.CustomerID = CustomerID;
         this.meterCode = meterCode;
         this.amount = amount;
         this.dueDate = dueDate;
@@ -45,10 +47,10 @@ public class Bill {
     }
 
     public boolean isPaid(){
-        return isPaid;
+        return status;
     }
     public void setPaid(boolean paid){
-        isPaid = paid; 
+        status = paid;
     }
 
     public String getDueDate(){
