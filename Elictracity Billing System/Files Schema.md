@@ -1,8 +1,8 @@
 
 ### UserInfo.csv
 
-| Id  | Email | Password | Name | Phone | Address | Role | MeterCode | Adding Date  |
-| --- | ----- | -------- | ---- | ----- | ------- |------|-----------|--------------|
+| Id  | Email | Password | Name | Phone | Address | Role | MeterCode | Adding Date  | Role |
+| --- | ----- | -------- | ---- | ----- | ------- |------|-----------|--------------|------|
 ### Admins.csv
 
 | Id  | Email | Password | Name |
@@ -20,3 +20,8 @@
 
 | CustomerId | Path |
 | ---------- | ---- |
+
+### Bills.csv
+| billId | CustomerID | meterCode | amount | dueDate | region | status |
+|---------|-----------|-----------|--------|---------|--------|--------|
+Status: true for paid, false for unpaid
