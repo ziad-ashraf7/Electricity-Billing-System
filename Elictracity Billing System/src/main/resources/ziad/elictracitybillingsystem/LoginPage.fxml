@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="527.0" stylesheets="@../../Styles/Login.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+    <children>
+        <Label alignment="CENTER" layoutX="17.0" layoutY="14.0" prefHeight="42.0" prefWidth="126.0" text="Login Page" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <TextField layoutX="23.0" layoutY="77.0" prefHeight="35.0" prefWidth="461.0" promptText="Email" style="-fx-background-color: #eee; -fx-border-width: 0 0 2 0; -fx-border-color: gray; -fx-padding: 10;">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TextField>
+        <TextField layoutX="23.0" layoutY="155.0" prefHeight="35.0" prefWidth="461.0" promptText="Password" style="-fx-background-color: #eee; -fx-border-width: 0 0 2 0; -fx-border-color: gray; -fx-padding: 10;">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TextField>
+        <ChoiceBox fx:id="AccountType" layoutX="23.0" layoutY="226.0" prefWidth="150.0" />
+      <Button layoutX="24.0" layoutY="286.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="462.0" text="Login" />
+      <Button layoutX="23.0" layoutY="343.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="462.0" text="Create Account" />
+    </children>
+
+</AnchorPane>
