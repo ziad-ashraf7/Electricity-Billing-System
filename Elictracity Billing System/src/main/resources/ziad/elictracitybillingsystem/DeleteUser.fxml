@@ -5,12 +5,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../Styles/AddUser.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeleteUser">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../Styles/AddUser.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DeleteUser">
    <children>
       <TextField fx:id="IdTF" layoutX="74.0" layoutY="101.0" prefHeight="42.0" prefWidth="453.0" styleClass="input-field" stylesheets="@../../Styles/DeleteUser.css" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="73.0" />
       <Label layoutX="74.0" layoutY="81.0" prefWidth="149.0" styleClass="input-label" text="Enter User ID" />
-      <Label fx:id="errMsg" layoutX="74.0" layoutY="143.0" prefHeight="30.0" prefWidth="453.0" styleClass="err-msg" text="Enter User ID" />
+      <Label fx:id="errMsg" layoutX="74.0" layoutY="143.0" prefHeight="30.0" prefWidth="159.0" styleClass="err-msg" text="Enter User ID" />
       <Label fx:id="delBtn" layoutX="403.0" layoutY="181.0" onMouseClicked="#deletUser" prefHeight="30.0" prefWidth="124.0" styleClass="add-button" text="Delete User">
          <padding>
             <Insets left="7.0" />

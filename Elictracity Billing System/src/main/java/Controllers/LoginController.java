@@ -85,7 +85,7 @@ public class LoginController implements Initializable {
                 if(email.equals(recordArr[1]) && password.equals(recordArr[2])){
                     Stage cstg = (Stage)loginBtn.getScene().getWindow();
                     cstg.close();
-                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin-view.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Customer_Bills.fxml"));
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setTitle("Hello!");
