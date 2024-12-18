@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="645.0" styleClass="anchor" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillsController">
    <children>
-      <TableView fx:id="billTble" layoutX="14.0" layoutY="214.0" prefHeight="423.0" prefWidth="1100.0" styleClass="billTble" stylesheets="@../../../Styles/User-Controlls.css">
+      <TableView fx:id="billTble" layoutX="14.0" layoutY="214.0" prefHeight="423.0" prefWidth="1100.0" styleClass="billTble" stylesheets="@../../Styles/User-Controlls.css">
          <columns>
             <TableColumn fx:id="billIdColumn" prefWidth="138.0" text="Bill ID" />
             <TableColumn fx:id="ownerIDColumn" prefWidth="152.0" text="Owner ID" />
