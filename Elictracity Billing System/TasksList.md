@@ -1,4 +1,4 @@
 - [ ] Email Validation
 - [ ] Phone Validation
-- [ ] Get unpaid bills
+- [ ] Get unpaid bills [DONE]
 - [ ] 

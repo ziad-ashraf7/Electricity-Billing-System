@@ -1,0 +1,21 @@
+.text-field
+{
+    -fx-background-color: #eee; -fx-border-width: 0 0 2 0; -fx-border-color: gray; -fx-padding: 5;
+}
+
+.button{
+    -fx-background-color:#6200E8 ;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 10px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #4b8ef7;
+    -fx-pref-height: 10px;
+}
+
+
+.button:hover {
+    -fx-background-color: #2575fc;
+    -fx-cursor: hand;
+}

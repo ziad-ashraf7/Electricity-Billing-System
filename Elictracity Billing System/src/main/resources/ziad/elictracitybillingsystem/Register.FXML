@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:id="registerPage" style="-fx-background-color: #F7F7F7;" padding="20">
+
+    <!-- Top Section: Upload Button -->
+    <VBox alignment="TOP_CENTER" spacing="15">
+        <Button fx:id="uploadButton" text="UPLOAD CONTRACT"
+                style="-fx-background-color: #6200EE; -fx-text-fill: white; -fx-font-weight: bold;
+                       -fx-background-radius: 50; -fx-padding: 10 20;">
+            <graphic>
+                <Text text="+" style="-fx-font-size: 16; -fx-fill: white;" />
+            </graphic>
+        </Button>
+    </VBox>
+
+    <!-- Center Section: Form -->
+    <VBox alignment="TOP_CENTER" spacing="15" padding="20" BorderPane.alignment="CENTER">
+        <!-- Name Fields -->
+        <HBox spacing="15" alignment="CENTER">
+            <TextField fx:id="firstNameField" promptText="First name" />
+            <TextField fx:id="middleNameField" promptText="Middle name" />
+            <TextField fx:id="lastNameField" promptText="Last name" />
+        </HBox>
+
+        <!-- SSN and ID -->
+        <HBox spacing="15" alignment="CENTER">
+            <TextField fx:id="ssnField" promptText="SSN" />
+            <TextField fx:id="idField" promptText="ID (Can't be changed)" editable="false"/>
+            <TextField fx:id="phoneNumberField" promptText="Phone Number" />
+        </HBox>
+
+        <!-- Email -->
+        <HBox spacing="15" alignment="CENTER">
+            <TextField fx:id="emailField" promptText="Email" />
+        </HBox>
+
+        <!-- Address Fields -->
+        <HBox spacing="15" alignment="CENTER">
+            <TextField fx:id="regionField" promptText="Region" />
+            <TextField fx:id="streetField" promptText="Street" />
+            <TextField fx:id="buildingNumberField" promptText="Building Number" />
+        </HBox>
+
+        <!-- Password -->
+        <HBox spacing="15" alignment="CENTER">
+            <PasswordField fx:id="passwordField" promptText="New Password" />
+        </HBox>
+
+        <!-- Register Button -->
+        <HBox spacing="15" alignment="CENTER">
+            <Button fx:id="registerButton" text="REGISTER"
+                    style="-fx-background-color: #6200EE; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-background-radius: 50; -fx-padding: 10 20;">
+                <graphic>
+                    <Text text="+" style="-fx-font-size: 16; -fx-fill: white;" />
+                </graphic>
+            </Button>
+        </HBox>
+    </VBox>
+</BorderPane>

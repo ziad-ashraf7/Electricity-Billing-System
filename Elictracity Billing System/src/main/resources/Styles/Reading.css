@@ -1,0 +1,137 @@
+/* General Styles */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #FFFFFF;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    -fx-background-color: #F8F9FA;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+.sidebar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: gray;
+    -fx-font-size: 14px;
+}
+
+.sidebar .button:hover {
+    -fx-text-fill: purple;
+    -fx-underline: true;
+}
+
+.sidebar .active {
+    -fx-text-fill: purple;
+    -fx-font-weight: bold;
+}
+
+/* Logout Button */
+.logout-button {
+    -fx-background-color: purple;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-pref-width: 80px;
+}
+
+/* Main Content Buttons */
+.main-button {
+    -fx-background-color: purple;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 5 15;
+    -fx-font-size: 14px;
+}
+
+.main-button:hover {
+    -fx-background-color: #A020F0;
+}
+
+/* Table Styles */
+.table-view {
+    -fx-background-color: #FAFAFA;
+    -fx-background-radius: 10;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.table-view .column-header {
+    -fx-background-color: #F1F1F1;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #EFEFEF;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #DDDDEE;
+}
+
+/* Popup Styles */
+.dialog-pane {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+    -fx-padding: 20;
+}
+
+.dialog-pane .label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.text-field, .date-picker {
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .date-picker:focused {
+    -fx-border-color: purple;
+}
+
+.help-text {
+    -fx-font-size: 10px;
+    -fx-text-fill: gray;
+}
+
+/* Popup Buttons */
+.popup-button {
+    -fx-text-fill: purple;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
+}
+
+.popup-button:hover {
+    -fx-underline: true;
+}
+
+.submit-button {
+    -fx-text-fill: purple;
+    -fx-background-color: transparent;
+    -fx-font-size: 12px;
+}
+
+.cancel-button {
+    -fx-text-fill: purple;
+    -fx-font-size: 12px;
+}
+
+.cancel-button:hover, .submit-button:hover {
+    -fx-underline: true;
+}
