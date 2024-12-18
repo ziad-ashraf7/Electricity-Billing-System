@@ -98,7 +98,7 @@ public class LoginController implements Initializable {
                     return new Login(parseCustomerInfoObject(recordArr));
                 }
             }
-        } else if(accType.equals("admin")){
+        } else if(accType.equals("Admin")){
             fscanner = new Scanner(new File(String.valueOf(UserUnitTesting.class.getResource("/Database/Admins.csv")).replace("file:/", "").replace("%20"," ")));
             recordArr = new String[0];
 
@@ -107,10 +107,22 @@ public class LoginController implements Initializable {
                 recordArr = record.split(",");
 
                 if(email.equals(recordArr[1]) && password.equals(recordArr[2])){
+                    Stage cstg = (Stage)loginBtn.getScene().getWindow();
+                    cstg.close();
+                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin-view.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load());
+                    Stage stage = new Stage();
+                    stage.setTitle("Hello!");
+                    stage.setWidth(1200);
+                    stage.setHeight(700);
+                    stage.setScene(scene);
+                    stage.setResizable(true);
+                    stage.show();
+
                     return new Login(parseAdminInfoObject(recordArr));
                 }
             }
-        } else if(accType.equals("operator")){
+        } else if(accType.equals("Operator")){
             fscanner = new Scanner(new File(String.valueOf(UserUnitTesting.class.getResource("/Database/Operators.csv")).replace("file:/", "").replace("%20"," ")));
             recordArr = new String[0];
 
@@ -119,6 +131,18 @@ public class LoginController implements Initializable {
                 recordArr = record.split(",");
 
                 if(email.equals(recordArr[1]) && password.equals(recordArr[2])){
+                    Stage cstg = (Stage)loginBtn.getScene().getWindow();
+                    cstg.close();
+                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin-view.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load());
+                    Stage stage = new Stage();
+                    stage.setTitle("Hello!");
+                    stage.setWidth(1200);
+                    stage.setHeight(700);
+                    stage.setScene(scene);
+                    stage.setResizable(true);
+                    stage.show();
+
                     return new Login(parseOperatorInfoObject(recordArr));
                 }
             }
