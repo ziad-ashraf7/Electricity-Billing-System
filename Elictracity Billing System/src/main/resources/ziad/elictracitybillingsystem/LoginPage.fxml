@@ -15,19 +15,19 @@
                 <Font name="System Bold" size="16.0" />
             </font>
         </Label>
-        <TextField layoutX="23.0" layoutY="77.0" prefHeight="35.0" prefWidth="461.0" promptText="Email" style="-fx-background-color: #eee; -fx-border-width: 0 0 2 0; -fx-border-color: gray; -fx-padding: 10;">
+        <TextField fx:id="emailField" layoutX="23.0" layoutY="77.0" prefHeight="35.0" prefWidth="461.0" promptText="Email" style="-fx-background-color: #eee; -fx-border-width: 0 0 2 0; -fx-border-color: gray; -fx-padding: 10;">
             <opaqueInsets>
                 <Insets />
             </opaqueInsets>
         </TextField>
-        <TextField layoutX="23.0" layoutY="155.0" prefHeight="35.0" prefWidth="461.0" promptText="Password" style="-fx-background-color: #eee; -fx-border-width: 0 0 2 0; -fx-border-color: gray; -fx-padding: 10;">
+        <TextField fx:id="passwordField"  layoutX="23.0" layoutY="155.0" prefHeight="35.0" prefWidth="461.0" promptText="Password" style="-fx-background-color: #eee; -fx-border-width: 0 0 2 0; -fx-border-color: gray; -fx-padding: 10;">
             <opaqueInsets>
                 <Insets />
             </opaqueInsets>
         </TextField>
         <ChoiceBox fx:id="AccountType" layoutX="23.0" layoutY="226.0" prefWidth="150.0" />
-      <Button layoutX="24.0" layoutY="286.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="462.0" text="Login" />
-      <Button layoutX="23.0" layoutY="343.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="462.0" text="Create Account" />
+      <Button layoutX="24.0" layoutY="286.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="462.0" text="Login" fx:id="loginBtn" />
+      <Button layoutX="23.0" layoutY="343.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="462.0" text="Create Account" fx:id="cracBtn" />
     </children>
 
 </AnchorPane>
