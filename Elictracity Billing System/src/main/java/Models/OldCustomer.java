@@ -1,6 +1,14 @@
 package Models;
 
+import ziad.elictracitybillingsystem.UserUnitTesting;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
 
 public class OldCustomer extends User  {
     private int userId;
@@ -83,10 +91,41 @@ public class OldCustomer extends User  {
         this.unpaidBills = unpaidBills;
     }
 
-    public void payBill(String billCode){
+    public void payBill(String billCode) throws FileNotFoundException {
         if (unpaidBills.contains(billCode)) {
-            unpaidBills.remove(billCode);
-            System.out.println("Bill " + billCode + " has been paid.");
+            String filePath = String.valueOf(UserUnitTesting.class.getResource("/Database/Bills.csv")).replace("file:/", "").replace("%20"," "); // File path
+            List<String> allRows = new ArrayList<>();
+            boolean isBillUpdated = false;
+
+            try (Scanner scanner = new Scanner(new File(filePath))) {
+                while(scanner.hasNextLine()) {
+                    String currentLine = scanner.nextLine();
+                    String[] recordArr = currentLine.split(",");
+
+                    if (billCode.equals(recordArr[0])) {
+                        recordArr[6] = "true";
+                        currentLine = String.join(",", recordArr);
+                        isBillUpdated = true;
+                    }
+                    allRows.add(currentLine);
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            try (PrintWriter writer = new PrintWriter(new FileWriter(filePath))) {
+                for (String row : allRows) {
+                    writer.println(row);
+                }
+                if (isBillUpdated) {
+                    unpaidBills.remove(billCode);
+                    System.out.println("Bill " + billCode + " has been paid.");
+                } else {
+                    System.out.println("Bill " + billCode + " not found.");
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         } else {
             System.out.println("Bill " + billCode + " not found or already paid.");
         }
