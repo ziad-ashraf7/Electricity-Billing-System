@@ -25,15 +25,16 @@ public class UserUnitTesting {
             }
         }
 
-        List<Bill> unpaidBillsTmp = new ArrayList<Bill>();
+        List<String> unpaidBillsTmp = new ArrayList<String>();
         fscanner = new Scanner(new File(String.valueOf(UserUnitTesting.class.getResource("/Database/Bills.csv")).replace("file:/", "").replace("%20"," ")));
         while(fscanner.hasNext()){
             compRecord = fscanner.next().split(",");
             if(compRecord[1].equals(recordArr[0]) && compRecord[6].equals("false")){
-                Bill tmp = new Bill(Integer.parseInt(compRecord[0]), Integer.parseInt(compRecord[1]), compRecord[2], Double.parseDouble(compRecord[3]), compRecord[4], compRecord[5]);
-                unpaidBillsTmp.add(tmp);
+//                Bill tmp = new Bill(Integer.parseInt(compRecord[0]), Integer.parseInt(compRecord[1]), compRecord[2], Double.parseDouble(compRecord[3]), compRecord[4], compRecord[5]);
+                unpaidBillsTmp.add(compRecord[0]);
             }
         }
+        System.out.println(Arrays.toString(unpaidBillsTmp.toArray()));
         return new OldCustomer(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[3], recordArr[4], recordArr[5], recordArr[6], complaintsTmp, unpaidBillsTmp);
     }
     static Admin parseAdminInfoObject(String[] recordArr) throws FileNotFoundException {

@@ -19,10 +19,10 @@ public class OldCustomer extends User  {
     private String meterCode;
     //    private boolean isNewCustomer = false;
     private List<Complaint> complaints;
-    private List<Bill> unpaidBills;
+    private List<String> unpaidBills;
 
     // Constructor
-    public OldCustomer(int customerId, String email, String name, String phone, String address, String meterCode, List<Complaint> complaints, List<Bill> unpaidBills) {
+    public OldCustomer(int customerId, String email, String name, String phone, String address, String meterCode, List<Complaint> complaints, List<String> unpaidBills) {
         this.userId = customerId;
         this.name = name;
         this.email = email;
@@ -84,10 +84,10 @@ public class OldCustomer extends User  {
         this.complaints = complaints;
     }
 
-    public List<Bill> getUnpaidBills(){
+    public List<String> getUnpaidBills(){
         return unpaidBills;
     }
-    public void setUnpaidBills(List<Bill> unpaidBills){
+    public void setUnpaidBills(List<String> unpaidBills){
         this.unpaidBills = unpaidBills;
     }
 
