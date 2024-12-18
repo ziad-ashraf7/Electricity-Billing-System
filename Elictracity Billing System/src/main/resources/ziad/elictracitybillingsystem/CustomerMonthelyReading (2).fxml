@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="-10.0" layoutY="9.0" prefHeight="450.0" prefWidth="88.0" style="-fx-background-color: white; -fx-padding: 10px; -fx-background-radius: 15;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="69.0" style="-fx-background-radius: 10; -fx-font-weight: bold; -fx-background-color: #6C63FF; -fx-text-fill: white; -fx-font-size: 12px;" text="Log Out" />
+         </children>
+      </VBox>
+      <Button layoutX="499.0" layoutY="14.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="230.0" style="-fx-background-radius: 15; -fx-background-color: #6C63FF; -fx-font-size: 14px; -fx-padding: 8 15; -fx-font-weight: bold; -fx-text-fill: white;" text="Add New Monthly reading" />
+      <TableView layoutX="104.0" layoutY="86.0" prefHeight="382.0" prefWidth="637.0" style="-fx-background-color: white; -fx-border-color: #DEE2E6; -fx-background-radius: 10;">
+        <columns>
+          <TableColumn prefWidth="98.3999252319336" style="-fx-alignment: CENTER-LEFT; font-size: 12px; -fx-text-fill: #495057;" text="ID" />
+          <TableColumn prefWidth="98.4000244140625" style="-fx-background-color: wight;" text="Reading" />
+            <TableColumn prefWidth="112.79998779296875" text="Meter Code" />
+            <TableColumn prefWidth="112.00009155273438" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
