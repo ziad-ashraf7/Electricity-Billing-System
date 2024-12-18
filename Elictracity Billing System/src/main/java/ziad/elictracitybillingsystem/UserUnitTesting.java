@@ -29,7 +29,7 @@ public class UserUnitTesting {
         fscanner = new Scanner(new File(String.valueOf(UserUnitTesting.class.getResource("/Database/Bills.csv")).replace("file:/", "").replace("%20"," ")));
         while(fscanner.hasNext()){
             compRecord = fscanner.next().split(",");
-            if(compRecord[1].equals(recordArr[0]) && compRecord[6].equals("false")){
+            if(compRecord[1].equals(recordArr[0]) && compRecord[6].equals("unpaid")){
 //                Bill tmp = new Bill(Integer.parseInt(compRecord[0]), Integer.parseInt(compRecord[1]), compRecord[2], Double.parseDouble(compRecord[3]), compRecord[4], compRecord[5]);
                 unpaidBillsTmp.add(compRecord[0]);
             }
