@@ -14,7 +14,7 @@
          </children>
       </VBox>
       <Button fx:id="addNew" layoutX="499.0" layoutY="14.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="230.0" style="-fx-background-radius: 15; -fx-background-color: #6C63FF; -fx-font-size: 14px; -fx-padding: 8 15; -fx-font-weight: bold; -fx-text-fill: white;" text="Add New Monthly reading" />
-      <TableView layoutX="104.0" layoutY="86.0" prefHeight="382.0" prefWidth="637.0" style="-fx-background-color: white; -fx-border-color: #DEE2E6; -fx-background-radius: 10;">
+      <TableView fx:id="billTble" layoutX="104.0" layoutY="86.0" prefHeight="382.0" prefWidth="637.0" style="-fx-background-color: white; -fx-border-color: #DEE2E6; -fx-background-radius: 10;">
         <columns>
           <TableColumn fx:id="id" prefWidth="98.3999252319336" style="-fx-alignment: CENTER-LEFT; font-size: 12px; -fx-text-fill: #495057;" text="ID" />
           <TableColumn fx:id="reading" prefWidth="98.4000244140625" style="-fx-background-color: wight;" text="Reading" />

@@ -8,35 +8,28 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="300" prefWidth="400" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #E0E0E0; -fx-border-radius: 10;" stylesheets="@../../Styles/AddReadingPop.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
-
-    <!-- Title -->
+<AnchorPane prefHeight="300" prefWidth="400" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #E0E0E0; -fx-border-radius: 10;" stylesheets="@../../Styles/AddReadingPop.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddReadingController">
     <Label layoutX="20" layoutY="20" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Add new Reading" />
 
-    <!-- Form Fields -->
     <VBox layoutX="20" layoutY="60" prefWidth="360" spacing="15" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="60.0">
-        <!-- Reading Input -->
         <VBox spacing="5">
             <TextField fx:id="readingInput" promptText="Reading" />
             <Label style="-fx-font-size: 10px; -fx-text-fill: gray;" text="Help text" />
         </VBox>
 
-        <!-- Meter Code Input -->
         <VBox spacing="5">
             <TextField fx:id="meterCodeInput" promptText="Meter Code" />
             <Label style="-fx-font-size: 10px; -fx-text-fill: gray;" text="Help text" />
         </VBox>
 
-        <!-- Date Input -->
         <VBox spacing="5">
             <DatePicker fx:id="dateInput" promptText="Date" />
             <Label style="-fx-font-size: 10px; -fx-text-fill: gray;" text="Help text" />
         </VBox>
     </VBox>
 
-    <!-- Buttons -->
     <HBox alignment="CENTER_RIGHT" layoutX="250" layoutY="260" spacing="20" />
-     <Button layoutX="32.0" layoutY="247.0" prefHeight="26.0" prefWidth="156.0" text="SUBMIT COMPLAIN" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" />
-     <Button layoutX="211.0" layoutY="247.0" prefHeight="26.0" prefWidth="156.0" text="CANCEL" />
+     <Button fx:id="submitButton" layoutX="32.0" layoutY="247.0" prefHeight="26.0" prefWidth="156.0" text="SUBMIT COMPLAIN" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" />
+     <Button fx:id="cancelButton" layoutX="211.0" layoutY="247.0" prefHeight="26.0" prefWidth="156.0" text="CANCEL" />
 
 </AnchorPane>

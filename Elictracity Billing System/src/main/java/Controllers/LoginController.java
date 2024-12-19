@@ -53,7 +53,21 @@ public class LoginController implements Initializable {
                 }
             }
         } catch (FileNotFoundException e) {}
-        return new OldCustomer(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[3], recordArr[4], recordArr[5], recordArr[6], complaintsTmp, unpaidBillsTmp, BillsTmp);
+
+        List<String> ReadingsTmp = new ArrayList<String>();
+        try{
+            fscanner = new Scanner(new File(String.valueOf(UserUnitTesting.class.getResource("/Database/Readings.csv")).replace("file:/", "").replace("%20"," ")));
+            while(fscanner.hasNext()){
+                compRecord = fscanner.next().split(",");
+                if(compRecord[1].equals(recordArr[0])){
+                    ReadingsTmp.add(compRecord[0]);
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return new OldCustomer(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[3], recordArr[4], recordArr[5], recordArr[6], complaintsTmp, unpaidBillsTmp, BillsTmp, ReadingsTmp);
     }
     static Admin parseAdminInfoObject(String[] recordArr) throws FileNotFoundException {
 //        return new Admin(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[2], recordArr[3]);
