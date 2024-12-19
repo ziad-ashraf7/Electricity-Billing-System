@@ -15,4 +15,8 @@ public class Complaint {
         this.createdAt = createdAt;
         this.msg = msg;
     }
+
+    public String getdata() {
+        return String.join(",", createdAt, msg);
+    }
 }
