@@ -20,9 +20,10 @@ public class OldCustomer extends User  {
     //    private boolean isNewCustomer = false;
     private List<Complaint> complaints;
     private List<String> unpaidBills;
+    private List<String> Bills;
 
     // Constructor
-    public OldCustomer(int customerId, String email, String name, String phone, String address, String meterCode, List<Complaint> complaints, List<String> unpaidBills) {
+    public OldCustomer(int customerId, String email, String name, String phone, String address, String meterCode, List<Complaint> complaints, List<String> unpaidBills, List<String> Bills) {
         this.userId = customerId;
         this.name = name;
         this.email = email;
@@ -31,10 +32,8 @@ public class OldCustomer extends User  {
         this.meterCode = meterCode;
         this.complaints = complaints;
         this.unpaidBills = unpaidBills;
+        this.Bills = Bills;
     }
-
-
-
 
     @Override
     int getId() {
@@ -77,6 +76,20 @@ public class OldCustomer extends User  {
     }
 
 
+    static String getContractPath(int usrID) throws FileNotFoundException {
+        Scanner fscanner = new Scanner(System.in);
+        String[] compRecord = new String[0];
+        fscanner = new Scanner(new File(String.valueOf(UserUnitTesting.class.getResource("/Database/Contracts.csv")).replace("file:/", "").replace("%20"," ")));
+        while(fscanner.hasNext()){
+            String tmp = fscanner.next();
+            compRecord = tmp.split(",");
+            if(compRecord[0].equals(Integer.toString(usrID))){
+                return compRecord[1];
+            }
+        }
+        return "";
+    }
+
     public List<Complaint> getComplaints(){
         return complaints;
     }
@@ -86,6 +99,9 @@ public class OldCustomer extends User  {
 
     public List<String> getUnpaidBills(){
         return unpaidBills;
+    }
+    public List<String> getBills(){
+        return Bills;
     }
     public void setUnpaidBills(List<String> unpaidBills){
         this.unpaidBills = unpaidBills;
