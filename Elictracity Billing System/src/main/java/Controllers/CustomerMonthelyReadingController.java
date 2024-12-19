@@ -36,6 +36,9 @@ public class CustomerMonthelyReadingController implements Initializable {
     private Button addNew;
 
     @FXML
+    private Button move;
+
+    @FXML
     private TableView<String[]> billTble;
 
     @FXML
@@ -77,12 +80,31 @@ public class CustomerMonthelyReadingController implements Initializable {
         stage.setResizable(false);
         stage.showAndWait();
     }
+    private void move() throws IOException {
+        ((Stage) move.getScene().getWindow()).close();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Customer_Bills.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addNew.setOnAction(event->{
             try {
                 showPopup();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        move.setOnAction(event->{
+            try {
+                move();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
