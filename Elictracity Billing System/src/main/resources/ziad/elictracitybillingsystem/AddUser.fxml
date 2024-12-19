@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddUser">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="862.0" stylesheets="@../../Styles/AddUser.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddUser">
    <children>
       <TextField fx:id="emailTF" layoutX="77.0" layoutY="326.0" prefHeight="42.0" prefWidth="447.0" styleClass="input-field" stylesheets="@../../Styles/AddUser.css" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="76.0" />
       <ComboBox fx:id="roleSelect" layoutX="78.0" layoutY="505.0" prefHeight="51.0" prefWidth="447.0" promptText="Role" styleClass="input-field" stylesheets="@../../Styles/AddUser.css" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="75.0" />

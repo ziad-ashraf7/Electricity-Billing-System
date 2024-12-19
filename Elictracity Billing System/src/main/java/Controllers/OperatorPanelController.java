@@ -15,6 +15,7 @@ import utils.Constants;
 import ziad.elictracitybillingsystem.HelloApplication;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
 
 public class OperatorPanelController {
@@ -108,10 +109,22 @@ public class OperatorPanelController {
 
     private void navigateTo(String fxmlFile, String pageName) {
         try {
-            Parent root = FXMLLoader.load(HelloApplication.class.getResource("CollectPayments.fxml"));
-            Stage stage = (Stage) Stage.getWindows().getFirst();
-            stage.setScene(new Scene(root));
-            System.out.println("Navigated to " + pageName);
+//            Parent root = FXMLLoader.load(HelloApplication.class.getResource("CollectPayments.fxml"));
+//            Stage stage = (Stage) Stage.getWindows().getFirst();
+//            stage.setScene(new Scene(root));
+//            System.out.println("Navigated to " + pageName);
+            Stage stage = new Stage();
+            URL url = HelloApplication.class.getResource("CollectPayments.fxml");
+            System.out.println(url);
+            FXMLLoader fxmlLoader = new FXMLLoader(url);
+            Scene scene = new Scene(fxmlLoader.load());
+            stage.setTitle("Hello!");
+            stage.setWidth(1200);
+            stage.setHeight(700);
+            stage.setScene(scene);
+            stage.setResizable(true);
+
+            stage.show();
         } catch (IOException e) {
             System.err.println("Failed to load " + pageName + ": " + e.getMessage());
         }
