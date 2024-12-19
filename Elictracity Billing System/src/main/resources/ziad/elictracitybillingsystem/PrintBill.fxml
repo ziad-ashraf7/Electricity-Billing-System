@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.OperatorPanelController" prefHeight="400" prefWidth="600" stylesheets="@../../Styles/styles.css">
+    <VBox spacing="20" layoutX="50" layoutY="50">
+        <Label text="Print Bill" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+        <TextField promptText="Enter Meter Code" style="-fx-pref-width: 400px; -fx-font-size: 14px;"/>
+        <Button text="Print Bill" onAction="#printBill"/>
+
+        <Label text="Bill Details:" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        <Label text="(Details will appear here after generating the bill)" style="-fx-font-size: 14px;"/>
+    </VBox>
+    <Button text="Back" layoutX="20" layoutY="20" onAction="#goBack"/>
+</AnchorPane>

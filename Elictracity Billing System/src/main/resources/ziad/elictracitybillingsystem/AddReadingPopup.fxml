@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="300" prefWidth="400" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #E0E0E0; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="300" prefWidth="400" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #E0E0E0; -fx-border-radius: 10;" stylesheets="@../../Styles/AddReadingPop.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
 
     <!-- Title -->
     <Label layoutX="20" layoutY="20" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Add new Reading" />
 
     <!-- Form Fields -->
-    <VBox layoutX="20" layoutY="60" prefWidth="360" spacing="15">
+    <VBox layoutX="20" layoutY="60" prefWidth="360" spacing="15" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="60.0">
         <!-- Reading Input -->
         <VBox spacing="5">
             <TextField fx:id="readingInput" promptText="Reading" />
@@ -30,9 +35,8 @@
     </VBox>
 
     <!-- Buttons -->
-    <HBox alignment="CENTER_RIGHT" layoutX="250" layoutY="260" spacing="20">
-        <Button style="-fx-text-fill: purple;" text="SUBMIT COMPLAIN" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" />
-        <Button style="-fx-text-fill: purple;" text="CANCEL" />
-    </HBox>
+    <HBox alignment="CENTER_RIGHT" layoutX="250" layoutY="260" spacing="20" />
+     <Button layoutX="32.0" layoutY="247.0" prefHeight="26.0" prefWidth="156.0" text="SUBMIT COMPLAIN" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" />
+     <Button layoutX="211.0" layoutY="247.0" prefHeight="26.0" prefWidth="156.0" text="CANCEL" />
 
 </AnchorPane>

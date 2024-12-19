@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.OperatorPanelController"
+            prefHeight="700.0" prefWidth="1000.0" stylesheets="@../../Styles/styles.css">
+
+    <VBox prefWidth="200" prefHeight="700" spacing="15"
+          styleClass="sidebar">
+
+        <Label text="Operator Panel" styleClass="sidebar-title"/>
+
+        <Button fx:id="dashboardButton" text="Dashboard" styleClass="sidebar-button"
+                onAction="#goToDashboard"/>
+        <Button fx:id="collectPaymentsButton" text="Collect Payments" styleClass="sidebar-button"
+                onAction="#CollectPayments"/>
+        <Button fx:id="validateReadingButton" text="Validate Reading" styleClass="sidebar-button"
+                onAction="#validateReading"/>
+        <Button fx:id="viewRegionBillsButton" text="View Region Bills" styleClass="sidebar-button"
+                onAction="#viewRegionBills"/>
+        <Button fx:id="defineTariffButton" text="Define Tariff" styleClass="sidebar-button"
+                onAction="#defineTariff"/>
+        <Button fx:id="stopMeterButton" text="Stop Meter" styleClass="sidebar-button"
+                onAction="#stopMeter"/>
+
+        <Separator/>
+
+        <Button fx:id="settingsButton" text="Settings" styleClass="sidebar-button-secondary"
+                onAction="#openSettings"/>
+        <Button fx:id="logOutButton" text="Log Out" styleClass="sidebar-button-secondary"
+                onAction="#logOut"/>
+    </VBox>
+
+    <HBox layoutX="240.0" layoutY="10.0" spacing="30" styleClass="top-dashboard">
+        <VBox spacing="5">
+            <Label text="Total Payments" styleClass="stat-title"/>
+            <Label fx:id="totalPaymentsLabel" text="15,000" styleClass="stat-value"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Pending Bills" styleClass="stat-title"/>
+            <Label fx:id="pendingBillsLabel" text="34" styleClass="stat-value"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Resolved Issues" styleClass="stat-title"/>
+            <Label fx:id="resolvedIssuesLabel" text="12" styleClass="stat-value"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Active Customers" styleClass="stat-title"/>
+            <Label fx:id="activeCustomersLabel" text="267" styleClass="stat-value"/>
+        </VBox>
+    </HBox>
+
+    <VBox layoutX="210.0" layoutY="80.0" spacing="20" styleClass="main-container">
+        <Label text="Quick Actions" styleClass="main-title"/>
+
+        <GridPane hgap="20" vgap="20">
+            <Button fx:id="addNewPaymentButton" text="Add New Payment" styleClass="action-button"
+                    GridPane.rowIndex="0" GridPane.columnIndex="0" onAction="#addNewPayment"/>
+            <Button fx:id="printBillButton" text="Print Bill" styleClass="action-button"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1" onAction="#printBill"/>
+
+            <Button fx:id="viewCustomersButton" text="View Customers" styleClass="action-button"
+                    GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#viewCustomers"/>
+            <Button fx:id="reportIssuesButton" text="Report Issues" styleClass="action-button"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#reportIssues"/>
+
+            <Button fx:id="tariffManagementButton" text="Tariff Management" styleClass="action-button"
+                    GridPane.rowIndex="2" GridPane.columnIndex="0" onAction="#manageTariffs"/>
+            <Button fx:id="customerSubscriptionsButton" text="Customer Subscriptions" styleClass="action-button"
+                    GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#manageSubscriptions"/>
+        </GridPane>
+
+        <TextField fx:id="searchField" promptText="Search for Customers..." styleClass="search-bar"/>
+    </VBox>
+
+</AnchorPane>

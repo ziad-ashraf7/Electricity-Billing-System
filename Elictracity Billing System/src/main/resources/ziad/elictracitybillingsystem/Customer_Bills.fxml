@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CustomerBillsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox layoutY="10.0" prefHeight="450.0" prefWidth="88.0" style="-fx-background-color: white; -fx-padding: 10px; -fx-background-radius: 15;">
          <children>
@@ -17,10 +16,10 @@
       <Button fx:id="complain" layoutX="579.0" layoutY="14.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: #6C63FF; -fx-font-size: 14px; -fx-padding: 8 15; -fx-font-weight: bold; -fx-text-fill: white;" text="Complain Bill" />
       <TableView fx:id="billTble" layoutX="104.0" layoutY="86.0" prefHeight="382.0" prefWidth="637.0" style="-fx-background-color: white; -fx-border-color: #DEE2E6; -fx-background-radius: 10;">
         <columns>
-          <TableColumn fx:id="billIdColumn" prefWidth="98.3999252319336" style="-fx-alignment: CENTER-LEFT; font-size: 12px; -fx-text-fill: #495057;" text="Bill ID" />
-          <TableColumn fx:id="Cost" prefWidth="98.4000244140625" style="-fx-background-color: wight;" text="Cost" />
-            <TableColumn fx:id="MeterCode" prefWidth="112.79998779296875" text="Meter Code" />
-            <TableColumn fx:id="Date" prefWidth="112.00009155273438" text="Date" />
+          <TableColumn prefWidth="98.3999252319336" style="-fx-alignment: CENTER-LEFT; font-size: 12px; -fx-text-fill: #495057;" text="Bill ID" />
+          <TableColumn prefWidth="98.4000244140625" style="-fx-background-color: wight;" text="Cost" />
+            <TableColumn prefWidth="112.79998779296875" text="Meter Code" />
+            <TableColumn prefWidth="112.00009155273438" text="Date" />
         </columns>
       </TableView>
    </children>

@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="383.0" prefWidth="343.0" stylesheets="@../../Styles/BillDetails.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillDetails">
+<AnchorPane prefHeight="383.0" prefWidth="343.0" stylesheets="@../../Styles/BillDetails.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillDetails">
    <children>
       <Label alignment="CENTER" layoutX="124.0" layoutY="14.0" prefHeight="18.0" prefWidth="94.0" text="Bill Details">
          <font>
