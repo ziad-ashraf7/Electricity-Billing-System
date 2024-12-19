@@ -36,7 +36,6 @@ public class UserUnitTesting {
                 unpaidBillsTmp.add(compRecord[0]);
             }
         }
-        System.out.println(Arrays.toString(unpaidBillsTmp.toArray()));
         return new OldCustomer(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[3], recordArr[4], recordArr[5], recordArr[6], complaintsTmp, unpaidBillsTmp, BillsTmp);
     }
     static Admin parseAdminInfoObject(String[] recordArr) throws FileNotFoundException {
@@ -67,10 +66,7 @@ public class UserUnitTesting {
                 String record = fscanner.next();
                 recordArr = record.split(",");
 
-                System.out.println(Arrays.toString(recordArr));
-
                 if(email.equals(recordArr[1]) && password.equals(recordArr[2])){
-//                    System.out.println("Found");
                     return new Login(parseCustomerInfoObject(recordArr));
                 }
             }
@@ -83,7 +79,6 @@ public class UserUnitTesting {
                 recordArr = record.split(",");
 
                 if(email.equals(recordArr[1]) && password.equals(recordArr[2])){
-//                    System.out.println("Found");
                     return new Login(parseAdminInfoObject(recordArr));
                 }
             }
@@ -96,7 +91,6 @@ public class UserUnitTesting {
                 recordArr = record.split(",");
 
                 if(email.equals(recordArr[1]) && password.equals(recordArr[2])){
-//                    System.out.println("Found");
                     return new Login(parseOperatorInfoObject(recordArr));
                 }
             }
