@@ -31,7 +31,7 @@ public class LoginController implements Initializable {
         while(fscanner.hasNext()){
             compRecord = fscanner.next().split(",");
             if(compRecord[0].equals(recordArr[0])){
-                complaintsTmp.add(new Complaint(compRecord[0], compRecord[1]));
+                complaintsTmp.add(new Complaint(compRecord[0], compRecord[1], 1));
             }
         }
 
@@ -43,13 +43,12 @@ public class LoginController implements Initializable {
             if(compRecord[1].equals(recordArr[0])){
                 BillsTmp.add(compRecord[0]);
                 if(compRecord[6].equals("unpaid")){
-//                Bill tmp = new Bill(Integer.parseInt(compRecord[0]), Integer.parseInt(compRecord[1]), compRecord[2], Double.parseDouble(compRecord[3]), compRecord[4], compRecord[5]);
                     unpaidBillsTmp.add(compRecord[0]);
                 }
             }
         }
-//        System.out.println(Arrays.toString(unpaidBillsTmp.toArray()));
-        return new OldCustomer(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[3], recordArr[4], recordArr[5], recordArr[6], complaintsTmp, unpaidBillsTmp, BillsTmp);
+        new OldCustomer(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[3], recordArr[4], recordArr[5], recordArr[6], complaintsTmp, unpaidBillsTmp, BillsTmp);
+        return null;
     }
     static Admin parseAdminInfoObject(String[] recordArr) throws FileNotFoundException {
 //        return new Admin(Integer.parseInt(recordArr[0]), recordArr[1], recordArr[2], recordArr[3]);
@@ -135,7 +134,7 @@ public class LoginController implements Initializable {
                 if(email.equals(recordArr[1]) && password.equals(recordArr[2])){
                     Stage cstg = (Stage)loginBtn.getScene().getWindow();
                     cstg.close();
-                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin-view.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("OperatorView.fxml"));
                     Scene scene = new Scene(fxmlLoader.load());
                     Stage stage = new Stage();
                     stage.setTitle("Hello!");

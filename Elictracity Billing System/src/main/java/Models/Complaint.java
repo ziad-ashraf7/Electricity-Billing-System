@@ -12,7 +12,13 @@ public class Complaint {
     private String usrid;
     private String msg;
 
+
     public Complaint(String usrid, String msg) {
+        this.usrid = usrid;
+        this.msg = msg;
+    }
+
+    public Complaint(String usrid, String msg, int x) {
         this.usrid = usrid;
         this.msg = msg;
 

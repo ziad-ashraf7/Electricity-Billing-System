@@ -108,6 +108,7 @@ public class CustomerBillsController implements Initializable {
         Scanner fscanner = new Scanner(System.in);
         String[] compRecord = new String[0];
         try {
+            System.out.println("===================");
             fscanner = new Scanner(new File(String.valueOf(Paths.get("data\\bills.csv"))));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
