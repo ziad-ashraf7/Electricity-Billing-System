@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -13,9 +14,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="645.0" styleClass="anchor" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillsController">
+<AnchorPane prefHeight="645.0" styleClass="anchor" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillsController">
    <children>
-      <TableView fx:id="billTble" layoutX="14.0" layoutY="214.0" prefHeight="423.0" prefWidth="1100.0" styleClass="billTble" stylesheets="@../../Styles/User-Controlls.css">
+      <TableView fx:id="billTble" layoutX="14.0" layoutY="214.0" prefHeight="423.0" prefWidth="1100.0" styleClass="billTble" stylesheets="@../../Styles/User-Controlls.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="214.0">
          <columns>
             <TableColumn fx:id="billIdColumn" prefWidth="138.0" text="Bill ID" />
             <TableColumn fx:id="ownerIDColumn" prefWidth="152.0" text="Owner ID" />
@@ -40,8 +41,16 @@
          <children>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <ComboBox fx:id="region" layoutY="31.0" prefHeight="50.0" prefWidth="362.0" promptText="All" styleClass="input-field" stylesheets="@../../../Styles/AddUser.css" />
-                  <ComboBox fx:id="paidSt" layoutY="127.0" prefHeight="40.0" prefWidth="362.0" promptText="All" styleClass="input-field" stylesheets="@../../../Styles/AddUser.css" />
+                  <ComboBox fx:id="region" layoutY="31.0" prefHeight="50.0" prefWidth="362.0" promptText="All" styleClass="input-field">
+                     <stylesheets>
+                        <URL value="@../../Styles/AddUser.css" />
+                        <URL value="@../../Styles/AddUser.css" />
+                     </stylesheets></ComboBox>
+                  <ComboBox fx:id="paidSt" layoutY="127.0" prefHeight="40.0" prefWidth="362.0" promptText="All" styleClass="input-field">
+                     <stylesheets>
+                        <URL value="@../../Styles/AddUser.css" />
+                        <URL value="@../../Styles/AddUser.css" />
+                     </stylesheets></ComboBox>
                   <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter By Region" wrappingWidth="172.4755859375">
                      <font>
                         <Font name="System Bold" size="15.0" />
@@ -60,7 +69,7 @@
                      </font></Text>
                   <Label layoutX="14.0" prefHeight="73.0" prefWidth="326.0" styleClass="input-label2" text="Total Paid" textFill="WHITE">
                      <font>
-                        <Font size="35.0" name="System Bold"/>
+                        <Font name="System Bold" size="35.0" />
                      </font>
                   </Label>
                </children>
@@ -74,7 +83,7 @@
                      <font>
                         <Font size="50.0" />
                      </font></Text>
-                  <Label layoutX="13.0" layoutY="7.0" prefHeight="52.0" prefWidth="326.0" styleClass="input-label2"  text="Total unPaid"  textFill="WHITE">
+                  <Label layoutX="13.0" layoutY="7.0" prefHeight="52.0" prefWidth="326.0" styleClass="input-label2" text="Total unPaid" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="35.0" />
                      </font>
