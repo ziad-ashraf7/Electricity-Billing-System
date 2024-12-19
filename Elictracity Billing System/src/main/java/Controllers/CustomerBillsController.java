@@ -106,7 +106,7 @@ public class CustomerBillsController implements Initializable {
 
 
         // Showing the Controlls
-        Board.setCenter(null);
+//        Board.setCenter(null);
     }
 
 
