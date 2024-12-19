@@ -18,7 +18,7 @@ public class LoginUnitTesting extends Application {
     public void start(Stage primaryStage) throws Exception {
 //        FXMLLoader loader = new FXMLLoader(getClass().getResource("Customer_Bills.fxml"));
 //        FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CustomerMonthelyReading.fxml"));
         Parent root = loader.load();
 
         Scene scene = new Scene(root);
