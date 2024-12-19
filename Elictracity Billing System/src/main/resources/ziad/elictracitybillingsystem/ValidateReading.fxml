@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.OperatorPanelController" prefHeight="400" prefWidth="600" stylesheets="@../../Styles/styles.css">
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ValidateReadingController" prefHeight="400" prefWidth="600" stylesheets="@../../Styles/styles.css">
     <VBox spacing="20" layoutX="50" layoutY="50">
         <Label text="Validate Reading" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
 

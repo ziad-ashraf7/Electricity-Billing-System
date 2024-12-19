@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -12,6 +14,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import ziad.elictracitybillingsystem.HelloApplication;
 
 import java.io.IOException;
@@ -25,6 +28,9 @@ public class AdminViewController implements Initializable {
 
     @FXML
     private VBox userBillsCont;
+
+    @FXML
+    private VBox logout;
 
     @FXML
     private ImageView userBillsImg;
@@ -140,5 +146,19 @@ public class AdminViewController implements Initializable {
                 }
             }
         }
+    }
+    @FXML
+    void logOut(MouseEvent event) throws IOException {
+        Stage stage = (Stage) logout.getScene().getWindow();
+        stage.close();
+        stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LoginPage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.setResizable(true);
+
+        stage.show();
+
     }
 }

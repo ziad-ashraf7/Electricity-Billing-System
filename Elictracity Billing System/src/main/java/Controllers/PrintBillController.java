@@ -8,9 +8,12 @@ import javafx.stage.Stage;
 import ziad.elictracitybillingsystem.HelloApplication;
 
 import java.io.IOException;
-import java.util.Objects;
 
-public class CollectPaymentsController {
+public class PrintBillController {
+    public void printBill(ActionEvent actionEvent) {
+        System.out.println("Printing Bill");
+    }
+
     public void goBack(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) Stage.getWindows().getFirst();
         Parent root = FXMLLoader.load(HelloApplication.class.getResource("OperatorView.fxml"));

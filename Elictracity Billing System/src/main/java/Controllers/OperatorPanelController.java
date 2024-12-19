@@ -59,7 +59,13 @@ public class OperatorPanelController {
         // Linking button actions
         dashboardButton.setOnAction(e -> goToDashboard());
         settingsButton.setOnAction(e -> openSettings());
-        logOutButton.setOnAction(e -> logOut());
+        logOutButton.setOnAction(e -> {
+            try {
+                logOut();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
         collectPaymentsButton.setOnAction(e -> CollectPayments());
 
@@ -77,7 +83,7 @@ public class OperatorPanelController {
 
     @FXML
     private void printBill() throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/src/main/resources/ziad/elictracitybillingsystem/PrintBill.fxml")));
+        Parent root = FXMLLoader.load(HelloApplication.class.getResource("PrintBill.fxml"));
         Stage stage = (Stage) Stage.getWindows().getFirst();
         stage.setScene(new Scene(root));
     }
@@ -109,22 +115,12 @@ public class OperatorPanelController {
 
     private void navigateTo(String fxmlFile, String pageName) {
         try {
-//            Parent root = FXMLLoader.load(HelloApplication.class.getResource("CollectPayments.fxml"));
-//            Stage stage = (Stage) Stage.getWindows().getFirst();
-//            stage.setScene(new Scene(root));
-//            System.out.println("Navigated to " + pageName);
-            Stage stage = new Stage();
-            URL url = HelloApplication.class.getResource("CollectPayments.fxml");
-            System.out.println(url);
-            FXMLLoader fxmlLoader = new FXMLLoader(url);
-            Scene scene = new Scene(fxmlLoader.load());
-            stage.setTitle("Hello!");
-            stage.setWidth(1200);
-            stage.setHeight(700);
-            stage.setScene(scene);
-            stage.setResizable(true);
+            Parent root = FXMLLoader.load(HelloApplication.class.getResource(fxmlFile));
+            Stage stage = (Stage) Stage.getWindows().getFirst();
+            stage.setScene(new Scene(root));
+            System.out.println("Navigated to " + pageName);
+//            Stage stage = new Stage();
 
-            stage.show();
         } catch (IOException e) {
             System.err.println("Failed to load " + pageName + ": " + e.getMessage());
         }
@@ -177,8 +173,18 @@ public class OperatorPanelController {
     }
 
     @FXML
-    private void logOut() {
-        System.out.println("Logging Out...");
+    private void logOut() throws IOException {
+        Stage stage = (Stage) logOutButton.getScene().getWindow();
+        stage.close();
+        System.out.println("stage closed");
+        stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LoginPage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        System.out.println("file loaded");
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.setResizable(true);
+        stage.show();
     }
 
     @FXML

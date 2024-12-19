@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.OperatorPanelController" prefHeight="400" prefWidth="600" stylesheets="@../../Styles/styles.css">
-    <VBox spacing="20" layoutX="50" layoutY="50">
-        <Label text="Define Tariff" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+<AnchorPane prefHeight="400" prefWidth="600" stylesheets="@../../Styles/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DefineTariffController">
+    <VBox layoutX="50" layoutY="50" spacing="20">
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Define Tariff" />
 
-        <TextField promptText="Enter Customer Category" style="-fx-pref-width: 400px; -fx-font-size: 14px;"/>
-        <TextField promptText="Enter New Tariff Rate" style="-fx-pref-width: 400px; -fx-font-size: 14px;"/>
+        <TextField fx:id="customerIdField" promptText="Enter Customer Category" style="-fx-pref-width: 400px; -fx-font-size: 14px;" />
+        <TextField fx:id="costField" promptText="Enter New Tariff Rate" style="-fx-pref-width: 400px; -fx-font-size: 14px;" />
 
-        <Button text="Save Tariff" onAction="#saveTariff"/>
+        <Button onAction="#saveTariff" text="Save Tariff" />
 
-        <Label text="Tariff Details:" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
-        <Label text="(Details will appear here after saving the tariff)" style="-fx-font-size: 14px;"/>
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Tariff Details:" />
+        <Label style="-fx-font-size: 14px;" text="(Details will appear here after saving the tariff)" />
     </VBox>
-    <Button text="Back" layoutX="20" layoutY="20" onAction="#goBack"/>
+    <Button layoutX="20" layoutY="20" onAction="#goBack" text="Back" />
 </AnchorPane>

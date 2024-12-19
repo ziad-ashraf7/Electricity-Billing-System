@@ -13,7 +13,7 @@
     <BorderPane fx:id="Board" prefHeight="561.0" prefWidth="754.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <left>
             <VBox prefHeight="561.0" prefWidth="91.0" styleClass="bar" stylesheets="@../../Styles/Admin-view.css" BorderPane.alignment="CENTER">
-                <VBox prefHeight="76.0" prefWidth="91.0" styleClass="login-btn" translateY="10.0">
+                <VBox fx:id="logout" onMouseClicked="#logOut" prefHeight="76.0" prefWidth="91.0" styleClass="login-btn" translateY="10.0">
                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Log out" translateX="5.0" wrappingWidth="79.421875" />
                <VBox.margin>
                   <Insets />
