@@ -13,8 +13,8 @@
             <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="69.0" style="-fx-background-radius: 10; -fx-font-weight: bold; -fx-background-color: #6C63FF; -fx-text-fill: white; -fx-font-size: 12px;" text="Log Out" />
          </children>
       </VBox>
-      <Button layoutX="579.0" layoutY="14.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: #6C63FF; -fx-font-size: 14px; -fx-padding: 8 15; -fx-font-weight: bold; -fx-text-fill: white;" text="Complain Bill" />
-      <TableView layoutX="104.0" layoutY="86.0" prefHeight="382.0" prefWidth="637.0" style="-fx-background-color: white; -fx-border-color: #DEE2E6; -fx-background-radius: 10;">
+      <Button fx:id="complain" layoutX="579.0" layoutY="14.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: #6C63FF; -fx-font-size: 14px; -fx-padding: 8 15; -fx-font-weight: bold; -fx-text-fill: white;" text="Complain Bill" />
+      <TableView fx:id="billTble" layoutX="104.0" layoutY="86.0" prefHeight="382.0" prefWidth="637.0" style="-fx-background-color: white; -fx-border-color: #DEE2E6; -fx-background-radius: 10;">
         <columns>
           <TableColumn prefWidth="98.3999252319336" style="-fx-alignment: CENTER-LEFT; font-size: 12px; -fx-text-fill: #495057;" text="Bill ID" />
           <TableColumn prefWidth="98.4000244140625" style="-fx-background-color: wight;" text="Cost" />
