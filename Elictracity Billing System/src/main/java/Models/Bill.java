@@ -1,5 +1,11 @@
 package Models;
 
+import ziad.elictracitybillingsystem.UserUnitTesting;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Bill {
     private int billId;
     private int CustomerID;
@@ -75,6 +81,19 @@ public class Bill {
         return status;
     }
 
+    static String getBillInfo(String BillID) throws FileNotFoundException {
+        Scanner fscanner = new Scanner(System.in);
+        String[] compRecord = new String[0];
+        fscanner = new Scanner(new File(String.valueOf(UserUnitTesting.class.getResource("/Database/Bills.csv")).replace("file:/", "").replace("%20"," ")));
+        while(fscanner.hasNext()){
+            String tmp = fscanner.next();
+            compRecord = tmp.split(",");
+            if(compRecord[0].equals(BillID)){
+                return tmp;
+            }
+        }
+        return "";
+    }
    
     public double calculateLateFee(int lateDays, double dailyRate) {
         return lateDays * dailyRate;

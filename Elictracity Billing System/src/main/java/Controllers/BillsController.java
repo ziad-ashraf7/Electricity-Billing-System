@@ -1,4 +1,4 @@
-package Controllers.Admin;
+package Controllers;
 
 import Models.Bill;
 import javafx.collections.FXCollections;

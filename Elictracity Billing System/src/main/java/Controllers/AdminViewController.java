@@ -137,7 +137,6 @@ public class AdminViewController implements Initializable {
             for(Node node : imageView.getChildren()){
                 if(node instanceof Text){
                     ((Text) node).setFill(Color.BLACK);
-
                 }
             }
         }

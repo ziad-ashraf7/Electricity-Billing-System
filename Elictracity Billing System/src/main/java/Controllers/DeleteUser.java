@@ -41,7 +41,6 @@ public class DeleteUser implements Initializable {
         }
         errMsg.setText("User Not Found");
         errMsg.setVisible(true);
-
     }
 
     @Override

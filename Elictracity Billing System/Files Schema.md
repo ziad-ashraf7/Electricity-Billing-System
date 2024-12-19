@@ -1,8 +1,8 @@
 
 ### UserInfo.csv
 
-| Id  | Email | Password | Name | Phone | Address | Role | MeterCode | Adding Date  | Role |
-| --- | ----- | -------- | ---- | ----- | ------- |------|-----------|--------------|------|
+| Id  | Email | Password | Name | Phone | Address| MeterCode | Adding Date  | Role |
+| --- | ----- | -------- | ---- | ----- | -------|-----------|--------------|------|
 ### Admins.csv
 
 | Id  | Email | Password | Name |
