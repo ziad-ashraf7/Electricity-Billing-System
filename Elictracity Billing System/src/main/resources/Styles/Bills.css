@@ -1,9 +1,9 @@
 .con{
-    -fx-background-color: #cea9fd;
+    -fx-background-color: #6200E8;
     -fx-background-radius: 20px;
 }
-.con Text{
+.con{
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-font-size: xx-large;
+    -fx-font-size: 50px;
 }

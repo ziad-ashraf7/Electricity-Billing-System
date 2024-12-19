@@ -52,7 +52,7 @@
                      </font></Text>
                </children>
             </Pane>
-            <AnchorPane prefHeight="161.0" prefWidth="376.0" styleClass="con" stylesheets="@../../../Styles/Bills.css" GridPane.columnIndex="1">
+            <AnchorPane prefHeight="161.0" prefWidth="376.0" styleClass="con" stylesheets="@../../Styles/Bills.css" GridPane.columnIndex="1">
                <children>
                   <Text fx:id="paidcnt" layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="costTxt" text="0" textAlignment="CENTER" wrappingWidth="335.96875">
                      <font>
@@ -60,7 +60,7 @@
                      </font></Text>
                   <Label layoutX="14.0" prefHeight="73.0" prefWidth="326.0" styleClass="input-label2" text="Total Paid" textFill="WHITE">
                      <font>
-                        <Font size="35.0" />
+                        <Font size="35.0" name="System Bold"/>
                      </font>
                   </Label>
                </children>
@@ -68,13 +68,13 @@
                   <Insets left="20.0" right="10.0" />
                </GridPane.margin>
             </AnchorPane>
-            <AnchorPane prefHeight="131.0" styleClass="con" stylesheets="@../../../Styles/Bills.css" GridPane.columnIndex="2">
+            <AnchorPane prefHeight="131.0" styleClass="con" stylesheets="@../../Styles/Bills.css" GridPane.columnIndex="2">
                <children>
                   <Text fx:id="unpaidcnt" layoutX="13.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="costTxt" text="0" textAlignment="CENTER" wrappingWidth="326.0">
                      <font>
                         <Font size="50.0" />
                      </font></Text>
-                  <Label layoutX="13.0" layoutY="7.0" prefHeight="52.0" prefWidth="326.0" styleClass="input-label2" text="Total unPaid">
+                  <Label layoutX="13.0" layoutY="7.0" prefHeight="52.0" prefWidth="326.0" styleClass="input-label2"  text="Total unPaid"  textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="35.0" />
                      </font>

@@ -23,6 +23,7 @@ public class LoginUnitTesting extends Application {
 
         primaryStage.setTitle("Electricity Billing System");
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
