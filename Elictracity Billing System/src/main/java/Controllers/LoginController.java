@@ -152,11 +152,21 @@ public class LoginController implements Initializable {
         return null; // Login Error (Wrong Password, Wrong Account Type, Account not found...)
     }
 
+    private void CreateAccount() throws IOException {
+        Stage cstg = (Stage)loginBtn.getScene().getWindow();
+        cstg.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("RegisterPage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        AccountType.getItems().add("Select Account Type");
         AccountType.getItems().addAll(AccountTypes);
 
         AccountType.setValue("Customer");
@@ -164,6 +174,14 @@ public class LoginController implements Initializable {
         loginBtn.setOnAction(event -> {
             try {
                 login(emailField.getText(), passwordField.getText(), AccountType.getSelectionModel().getSelectedItem());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        cracBtn.setOnAction(event -> {
+            try {
+                CreateAccount();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

@@ -8,8 +8,7 @@ public class NewCustomer extends User   {
     private String address;
     private String meterCode;
     private String Role = String.valueOf(ROLES.CUSTOMER);
-    private String registrationDate;
-    private String contractFilePath; 
+    private String contractFilePath;
     private boolean isMeterReady;
     private String addingDate;
 
@@ -59,10 +58,10 @@ public class NewCustomer extends User   {
 
 
     public String getRegistrationDate(){
-        return registrationDate; 
+        return addingDate;
     }
     public void setRegistrationDate(String registrationDate){
-        this.registrationDate = registrationDate;
+        this.addingDate = registrationDate;
     }
 
     public String getContractFilePath(){
