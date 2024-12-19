@@ -11,6 +11,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import utils.Constants;
+import ziad.elictracitybillingsystem.HelloApplication;
+
 import java.io.IOException;
 import java.util.Objects;
 
@@ -105,7 +108,7 @@ public class OperatorPanelController {
 
     private void navigateTo(String fxmlFile, String pageName) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ziad/elictracitybillingsystem/" + fxmlFile)));
+            Parent root = FXMLLoader.load(HelloApplication.class.getResource("CollectPayments.fxml"));
             Stage stage = (Stage) Stage.getWindows().getFirst();
             stage.setScene(new Scene(root));
             System.out.println("Navigated to " + pageName);

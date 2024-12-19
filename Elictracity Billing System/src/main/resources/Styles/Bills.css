@@ -7,3 +7,11 @@
     -fx-font-weight: bold;
     -fx-font-size: xx-large;
 }
+.input-field {
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-background-color: #F1F1F1;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
