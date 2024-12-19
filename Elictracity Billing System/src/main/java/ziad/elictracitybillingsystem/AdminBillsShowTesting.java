@@ -1,4 +1,4 @@
-package ziad.elictracitybillingsystem.Old;
+package ziad.elictracitybillingsystem;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class AdminBillsShowTesting extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Admin/Bills.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Bills.fxml"));
         Parent root = loader.load();
 
         Scene scene = new Scene(root);
