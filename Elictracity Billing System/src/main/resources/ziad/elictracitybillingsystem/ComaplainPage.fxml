@@ -6,16 +6,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="319.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ComplainController">
+<AnchorPane prefHeight="319.0" prefWidth="454.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ComplainController">
    <children>
-      <Label alignment="CENTER" layoutY="14.0" prefHeight="19.0" prefWidth="170.0" text="Submit a Complain">
+      <Label alignment="CENTER" layoutX="28.0" layoutY="25.0" prefHeight="28.0" prefWidth="177.0" text="Submit a Complain" textFill="#6200e8">
          <font>
-            <Font size="13.0" />
+            <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <TextArea layoutX="28.0" layoutY="56.0" prefHeight="174.0" prefWidth="395.0" promptText="Complain" />
-      <Button layoutX="28.0" layoutY="245.0" mnemonicParsing="false" text="Submit Complain" />
-      <Button layoutX="154.0" layoutY="244.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="71.0" text="Cancel" />
+      <TextArea fx:id="complainTextArea" layoutX="28.0" layoutY="67.0" prefHeight="174.0" prefWidth="395.0" promptText="Complain">
+         <font>
+            <Font size="18.0" />
+         </font></TextArea>
+      <Button fx:id="submitButton" layoutX="28.0" layoutY="256.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #6200E8;" text="Submit Complain" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <Button fx:id="cancelButton" layoutX="220.0" layoutY="256.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #E80042;" text="Cancel" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
    </children>
 </AnchorPane>

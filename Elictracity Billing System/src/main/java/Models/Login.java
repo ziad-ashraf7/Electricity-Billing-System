@@ -36,6 +36,8 @@ public class Login {
         String pth = OldCustomer.getContractPath(cust.getId());
         Path contsFile = Paths.get("data\\contracts.csv");
 
+        List<String> rds =  cust.getReadings();
+        Path rdsFile = Paths.get("data\\readings.csv");
 
         try {
             // push user data
@@ -62,6 +64,14 @@ public class Login {
             // push user's contract
             Files.write(contsFile, (pth + System.lineSeparator()).getBytes(),
                     StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+
+            // push user's readings
+            Files.write(rdsFile, ("" + System.lineSeparator()).getBytes(),
+                    StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+            for(String x : rds){
+                Files.write(rdsFile, (Reading.getReadInfo(x) + System.lineSeparator()).getBytes(),
+                        StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

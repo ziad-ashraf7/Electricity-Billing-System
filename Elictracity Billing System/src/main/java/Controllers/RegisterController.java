@@ -77,7 +77,7 @@ public class RegisterController implements Initializable {
 
         if (selectedFile != null) {
             contractFilePath = selectedFile.getAbsolutePath();
-            System.out.println("Selected Contract File: " + contractFilePath);
+//            System.out.println("Selected Contract File: " + contractFilePath);
         } else {
             System.out.println("No file selected.");
         }
@@ -105,19 +105,24 @@ public class RegisterController implements Initializable {
                     addressField.getText(),
                     null,
                     currentDate,
-                    contractFilePath
+                    contractFilePath,
+                    passwordField.getText()
             );
 
-            System.out.println("User registered successfully:");
+            if(newCustomer.sts){
+//                System.out.println("User registered successfully:");
 //            System.out.println("ID: " + newCustomer.getUserId());
-            System.out.println("Name: " + newCustomer.getName());
-            System.out.println("Email: " + newCustomer.getEmail());
-            System.out.println("Phone: " + newCustomer.getPhone());
-            System.out.println("Address: " + newCustomer.getAddress());
-            System.out.println("Date: " + newCustomer.getAddingDate());
-            System.out.println("Contract File: " + newCustomer.getContractFilePath());
+//                System.out.println("Name: " + newCustomer.getName());
+//                System.out.println("Email: " + newCustomer.getEmail());
+//                System.out.println("Phone: " + newCustomer.getPhone());
+//                System.out.println("Address: " + newCustomer.getAddress());
+//                System.out.println("Date: " + newCustomer.getAddingDate());
+//                System.out.println("Contract File: " + newCustomer.getContractFilePath());
 
-            backLogin();
+                backLogin();
+            } else{
+                System.out.println("User already registered.");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
